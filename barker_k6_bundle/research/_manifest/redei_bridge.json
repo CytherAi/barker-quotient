@@ -9,7 +9,7 @@
     "python3",
     "barker_k6_bundle/research/redei_bridge.py"
   ],
-  "commit": "004e68bc12e816c072877efab74f4cae4369b741",
+  "commit": "dc62469db98d21b249d2f1b588b7426421bf7a45",
   "environment": {
     "machine": "arm64",
     "numpy": "2.5.1",

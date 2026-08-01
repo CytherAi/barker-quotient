@@ -1,5 +1,5 @@
 {
-  "commit": "004e68bc12e816c072877efab74f4cae4369b741",
+  "commit": "dc62469db98d21b249d2f1b588b7426421bf7a45",
   "environment": {
     "machine": "arm64",
     "numpy": "2.5.1",
@@ -7,24 +7,24 @@
     "python": "3.13.0"
   },
   "experiments": {
-    "burde_pair_law": "9b59942542a1712e85899da194a13a2ae3de16f09b9c78333a7a8071c285b906",
-    "discrimination_depth": "dca17e256dde95d999d786860cd41f8313f58153441866de4613795a5e0e4ce3",
-    "i6_vs_1wl": "bffbb582eea6f4bd96350e3de05f52d93ab4771ade47ade4f95253a0cdd3ad6e",
-    "k5_correlation": "49d430c38f9088b7e389393178b4978738c639c5c6258870016b477ac5be305e",
-    "maxpair_exact": "55f85e581fc3f84358c74d5e6e3bb71aa795f3e47d8c0231636c4c204f191a8f",
-    "per_depth_w2": "c9d600c1697d7feb53d77cbdb9c8de336b8cf5d1208dcf444fe3f2cfd949c1da",
-    "realization_theorem": "e5cd55b80b6d9fc0a0ecf7bf3f3b18de2a838bf863b8fc4c4c27b4a763c66be8",
-    "redei_bridge": "ab9c31a90b0220be6993820fc9b369e7a861ae81eb049445142dfd4f39e786e2",
-    "skeleton_e1": "e0c6ec801ec5328f28327d116ac118cd8c7b798aadf1b4e44299d9c33ec5cd46",
-    "skeleton_e1_mixed": "707fd23c7bc7d6ba146d6eb382b68dfafef8ff6549b39f42720412a3c0ba783b",
-    "skeleton_exact": "489ec50d78ae0b4064bebc69bb450497b006ae40d15d8ae5cfc8feac872788f4",
-    "skeleton_maxpair": "bc480cce3162189380af5ef065c56273d019a3ea62d2f36e7271b1219499db5c"
+    "burde_pair_law": "c6ea9daf8b09f2b0d841273c35a8c146615544ed4eab5c5f4a48de4f15e07de9",
+    "discrimination_depth": "62069c302978514c0ce1be9476dd2c472d055e06c981aa6f2eef146e980bf6a3",
+    "i6_vs_1wl": "92b6bdd7e20de136cad170f06c2cd5ce96916968cf856757aac1d0e8fef562d7",
+    "k5_correlation": "8b504f4ff9173159c1ca94db2751375446722000e4511187125a5996407d7911",
+    "maxpair_exact": "2c28016fd6fbb0effd060340da7524e7267086c8b0b8ca041ae4a900082ba6d0",
+    "per_depth_w2": "7172cd9c26202bceafa279126ebdb1ab91ef8810da61ef633e46daae43528dbd",
+    "realization_theorem": "a33dcd3575312ed48a07b9f1e4ada16e238924fa06a6866de27dd46a7406ae61",
+    "redei_bridge": "1b226d8c7e2beacbc57516a32c8ddda96e8037cbb4b57c1fc3a3ebc890a84137",
+    "skeleton_e1": "478bd59011a2a4f0f73d086abd09d86da759c12fb7ba29d170ce8a54abddac1d",
+    "skeleton_e1_mixed": "6a4ac8741d0e538b0d8643e3336239f5af2bc97965d478864fbb28b747ac5a76",
+    "skeleton_exact": "235170e23792770bec415052eb27067b2e1f37c0dd0eae62732134fcb8576819",
+    "skeleton_maxpair": "6ba356f7966a13a83eef546d609d7ee18d1e8a6c67d42ea51ae5457260b5eea3"
   },
   "inventory": {
     "files": {
       "CITATION.cff": "f96bce4291f72478f02a6efd051bfd5ef5c69db8871304edb9789b35897adac1",
       "README.md": "7d7fd1c3720dad3f48fb03e5568fe6eee83083b24f095ca7f799a65c5a4199e1",
-      "RELEASE_NOTES.md": "8cb49cac08733e88c02059abb588eabfc8393fd98c688985fd35da9a8bec2599",
+      "RELEASE_NOTES.md": "3e42bc81db46cb6345144eb50164e64601197acb5f2da7f8b50868d6d8309e61",
       "barker_k6_bundle/README.md": "e9907b43e71a3073f9b50470489f6dfd13345423c0cd5e762c2a6611458db749",
       "barker_k6_bundle/audit_cleanroom.py": "99f3b284bb6857a3b3fb3a829ebbf678fcd0487107616845f69426fdec8b4847",
       "barker_k6_bundle/audit_verify.py": "4d1ba34ab1e59d718bb78bbfb1a26be77c5fcaf17a7b321ee39d98aac5b5cf1b",
@@ -46,11 +46,11 @@
       "barker_k6_bundle/manuscript.md": "dc621d700143e89c291cb7eba70c9f2bbdb38aa7950a36719cb25578c3fc46a8",
       "barker_k6_bundle/manuscript.pdf": "bebe451b6643e72393d355b9069eec2555521b99f3cab5ae615e5d97b40fd83d",
       "barker_k6_bundle/pdf_math_filter.lua": "0e5ae5d2498f1a88b45e030aad7f8c8f4c33e81e11881b6d2d3d1ec724ed365a",
-      "barker_k6_bundle/realization/PUBLICATION_FREEZE.md": "a012b725e30b347a5148bfe5ac2cd1fe57dec5a9a12ed44c5df55d4cbbd07f16",
-      "barker_k6_bundle/realization/PUBLIC_STATEMENT.md": "99860b96cf0c9e8b627ab293b2973ed8236f90c71f2f07e41c8d0585cc2aefd6",
+      "barker_k6_bundle/realization/PUBLICATION_FREEZE.md": "737aebd403d85c52b0cb920982238937f669598c0a24b06a06ce885cab32951a",
+      "barker_k6_bundle/realization/PUBLIC_STATEMENT.md": "3a4f94b87aaa3d7b255f4f0a945d7a8c54d922b0d1c97aa2f55e03627ec93910",
       "barker_k6_bundle/realization/README.md": "8622afaa3dbdf98211e74d4b7cfcfdb660acd0999224e208fd8b95e16aeb34cd",
-      "barker_k6_bundle/realization/realization_paper.pdf": "e49677200e47e8dec9824ca152d30ad274db0b86e9e73b050be3a269c19baace",
-      "barker_k6_bundle/realization/realization_paper.tex": "751f1d13edfc06522d0655d3a77e3eb37cc6f43cb5a3c23d33b93d88ca4f1c53",
+      "barker_k6_bundle/realization/realization_paper.pdf": "fa7eabbe051e5b0023c1ebf6dc018bec4026abe129bf6068218e8dc737af0df2",
+      "barker_k6_bundle/realization/realization_paper.tex": "583781e3496758a09702b37a3d656fd05ec7f994d7c619621896d95ffb646536",
       "barker_k6_bundle/remark_4_5_1_dn_disconnection.py": "be6dac6cd4a29ad571946f1fffc1106fbcac2fba6330af1369cbc4df0ff5b275",
       "barker_k6_bundle/research/RESEARCH.md": "4fd92c9d96d4812fe20f1133dd8a2aa70ef99de3c64c6b4ff5073536a561f95c",
       "barker_k6_bundle/research/_common.py": "9a4cac239e1520827e8e251c2eaa6fe0003b2864267dcfc1208cbb7ec5a81323",
@@ -119,7 +119,7 @@
       "verify_all.sh": "5af3d28b792ac8ade6b5855cc45e40c6966dc588339ed29aaefe531ff189f259"
     },
     "n_files": 95,
-    "tree_sha256": "df71cffa60f03521a8419e9857addede83f4c32ca147ec4ab200ba6925bc7d61"
+    "tree_sha256": "d24d825921a1bc01bb4581cb1990214dc322305a304daaabce33e8ce8fc8758f"
   },
   "requirements": {
     "numpy_min": [
