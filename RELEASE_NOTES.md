@@ -9,7 +9,7 @@ Quick locator across all three:
 
 # v1.2 — Realization theorem companion and publication freeze
 
-**Release candidate:** 2026-07-30
+**Released:** 2026-07-30
 **Author:** Malek Alhazmi (CytherAi · [cytherai.com](https://cytherai.com))
 
 This candidate adds the companion paper *Realization of Gauge-Reduced
@@ -27,11 +27,11 @@ claim boundary and the stop rule: additional census sampling, `k = 7`
 eligibility work, and finite-range bias analysis are separate research
 projects rather than release blockers.
 
-End-to-end release-candidate state:
+End-to-end release state:
 
 - **5 verification entry points**, all PASS, including the provenance gate
 - **pytest suite:** **198 / 198 PASS** (187 core + 11 exact-skeleton)
-- **Provenance:** 110-file release inventory, 165 / 165 manifest-referenced
+- **Provenance:** 95-file release inventory, 150 / 150 manifest-referenced
   paths git-tracked, every registered artifact matching its manifest
 - **Rendered papers:** 57-page census companion and 10-page realization paper,
   both rebuilt from current sources and visually inspected

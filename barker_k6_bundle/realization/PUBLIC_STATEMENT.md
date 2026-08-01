@@ -207,8 +207,8 @@ are unobserved, never "forbidden."
 - 198 tests (187 core + 11 exact-skeleton), on Python 3.9 or newer.
 - 91 numerical audit checks; 50 clean-room checks; 6,320 character values
   cross-checked by an independent reimplementation, with zero divergence.
-- 12 experiments pinned by two-tier provenance manifests: 110 inventoried
-  files and 165 of 165 referenced paths Git-tracked and hash-verified.
+- 12 experiments pinned by two-tier provenance manifests: 95 inventoried
+  files and 150 of 150 referenced paths Git-tracked and hash-verified.
 - The four arithmetic verification scripts use only the Python standard
   library.  The provenance gate, exact engine, and test suites additionally
   require NumPy, and the tests require pytest; the driver installs both into a
