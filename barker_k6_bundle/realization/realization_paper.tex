@@ -1,0 +1,767 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  citecolor=blue!45!black,
+  urlcolor=blue!55!black
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Frob}{\operatorname{Frob}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\vtwo}{v_2}
+\newcommand{\cyc}{\mathrm{cyc}}
+\newcommand{\itlaw}{\mathrm{it}}
+
+\title{Realization of Gauge-Reduced 2-Power Residue Matrices\\
+\large Exact Chebotarev Laws and an Application to Barker Sequences}
+\author{Malek Alhazmi\\CytherAi\\\href{https://cytherai.com}{cytherai.com}}
+\date{Preprint, July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a prime $p\equiv1\pmod4$ such that $\ord_p(2)$ is odd, the
+$2$-primary quotient of $(\Z/p^2\Z)^\times$ is cyclic of order
+$2^{\vtwo(p-1)}$.  Its coordinate is defined only up to multiplication by
+an odd unit, giving a natural row gauge on matrices of mutual power-residue
+data.  We prove that, after this gauge reduction, quadratic-reciprocity
+parity and the conditions involving $2$ are the only realizability
+constraints.  More precisely, for every fixed realized prefix and every
+prescribed depth $t\ge3$, the next-prime transition is an exact
+prefix-independent Chebotarev law: one fair parity bit per new edge,
+independent uniform coordinates in the corresponding parity classes, and a
+common gauge on the new row.  The exact-depth slice has density
+$2/4^t$, and every admissible matrix is realized by infinitely many ordered
+tuples of distinct primes.  The proof computes a Kummer radical with its
+single exceptional $2$-line, determines the maximal abelian subfield by an
+affine commutator calculation, and identifies the resulting fiber product
+with quadratic reciprocity.  As an application, the reciprocity skeleton
+used in a companion Barker-sequence census is the exact iterated arithmetic
+law, not merely a null model.  This settles support and iterated-frequency
+questions while leaving the simultaneous-height regime, and all
+Barker-specific obstructions, open.
+\end{abstract}
+
+\begin{center}
+\small
+\textbf{MSC 2020:} 11R44, 11A15; secondary 11B83, 94A55.\\
+\textbf{Keywords:} power residues, Kummer extensions, Chebotarev density,
+quadratic reciprocity, residue matrices, Barker sequences.
+\end{center}
+
+\section{Introduction}
+
+Let $p$ be an odd prime and put $t_p=\vtwo(p-1)$.  The reduction map
+$(\Z/p^2\Z)^\times\to\F_p^\times$ has kernel of odd order, so it induces an
+isomorphism on maximal $2$-power quotients.  We write
+\[
+  \chi_p:(\Z/p^2\Z)^\times\longrightarrow C_{2^{t_p}}
+\]
+for the resulting quotient character, in additive notation.  A choice of
+generator identifies the target with $\Z/2^{t_p}\Z$; changing the generator
+multiplies the entire row by one odd unit.  Thus a matrix
+$(\chi_{p_i}(p_j))_{i\ne j}$ has an intrinsic row-gauge class even though no
+individual numerical coordinate is canonical.
+
+We consider the family
+\[
+  \mathcal H=\{p:p\equiv1\pmod4,\ \ord_p(2)\text{ is odd}\}.
+\]
+The terminology ``hard prime'' is used for this family in the accompanying
+Barker-sequence code, but is not standard and will not be used in theorem
+statements.  If $p\in\mathcal H$, then $\chi_p(2)=0$ and necessarily
+$p\equiv1\pmod8$, so $t_p\ge3$.
+
+Quadratic reciprocity gives the visible compatibility relation
+\begin{equation}\label{eq:parity-reciprocity}
+  \chi_p(q)\equiv\chi_q(p)\pmod2
+  \qquad(p,q\in\mathcal H,\ p\ne q).
+\end{equation}
+Our main result says that there are no others after row gauge.
+
+\begin{theorem}[Exact extension law]\label{thm:extension}
+Fix distinct primes $P=(p_1,\ldots,p_r)$ in $\mathcal H$, with
+$t_i=\vtwo(p_i-1)$.  Fix $t\ge3$ and put $N=2^t$.  As $q$ varies over
+primes in $\mathcal H$ of exact depth $\vtwo(q-1)=t$, the following
+conditional distribution exists and is independent of the numerical
+prefix $P$:
+\begin{enumerate}[label=(\roman*)]
+  \item the parities on the $r$ new edges are independent and fair;
+  \item conditional on those parities, the column coordinates
+  $\chi_{p_i}(q)\in\Z/2^{t_i}\Z$ are independent and uniform in their
+  parity classes;
+  \item the row coordinates $\chi_q(p_i)\in\Z/N\Z$ are independently
+  uniform in the matching parity classes;
+  \item the new row is observed modulo simultaneous multiplication by
+  $(\Z/N\Z)^\times$.
+\end{enumerate}
+The rational-prime law on gauge orbits is therefore the pushforward of the
+uniform raw-coordinate law.  The unconditional density of the slice is
+\[
+  \delta_t=\frac{2}{4^t},
+\]
+also independent of $P$.
+\end{theorem}
+
+\begin{corollary}[Realization]\label{cor:realization}
+For every depth vector $(t_1,\ldots,t_k)$ with $t_i\ge3$, every
+row-gauge class satisfying \eqref{eq:parity-reciprocity} is realized by
+infinitely many ordered tuples of distinct primes in $\mathcal H$.
+\end{corollary}
+
+The theorem is stronger than a support result: it supplies an exact
+per-prefix transition law.  It is also deliberately narrower than a
+simultaneous-height theorem.  All prime bounds may be taken successively,
+because the conditional law is prefix-independent; nothing here gives a
+uniform Chebotarev error term as the prefix field grows.
+
+The classical single-row precedent is Schinzel's extension of Kummer's
+theorem on prescribed power residues~\cite{Schinzel75,Schinzel77,Schinzel80}.
+His Theorem~4 is stated for general exponent $n$, not only odd-prime
+exponent; over $\Q$ its unrestricted clause includes $n=2^t$, since the
+number $w$ of roots of unity in $\Q$ is $2\not\equiv0\pmod4$.  Applied to
+multiplicatively independent rational primes, it realizes arbitrary
+single-row power-residue prescriptions.  What it does not supply is the
+coupled problem here, where the prescribed radicands are themselves the
+prime moduli, the reciprocal row and column must be realized together,
+exact depth and the condition on $2$ select one Frobenius fiber, and the
+observable row is defined only up to gauge.
+
+Quadratic residue matrices were characterized by Dummit, Dummit, and
+Kisilevsky, who also treated cubic and quartic analogues over cyclotomic
+ground fields~\cite{DDK}.  For larger exponents they identify two
+complications, not one: higher-power reciprocity itself becomes more
+complicated, and prime ideals of the cyclotomic base need not be principal.
+Their closing remark also considers dropping the primary normalization and
+observes that the resulting larger matrix classes appear less tractable to
+characterization.  The present paper answers that latter difficulty for one
+specific family: rational-prime radicands at arbitrary $2$-power depth.  The
+row-gauge quotient records the discarded generator normalization and restores
+an exact characterization and transition law.  Like their cubic and quartic
+realization proofs, ours adjoins one prime at a time by Chebotarev; the new
+content is the quantitative law for that coupled step.  We make no claim that
+this family is equivalent to their general higher-power formulation or that
+the general $m>4$ problem is settled.  Dummit later developed the
+$d$th-power residue-matrix program in the finite-field direction~\cite{DummitFF};
+the present extension instead stays over $\Q$ and moves up the $2$-power tower.
+
+DDK also record that direct finite-height counts of their quadratic
+configuration types can remain far from the exact Chebotarev frequencies,
+and cite the small-prime bias theorem of Dummit--Granville--Kisilevsky as the
+explanation~\cite{DDK,DGK}.  This is the direct precedent for the companion
+census's opposite-signed finite-height residuals.  It does not resolve them:
+the DGK theorem treats fixed Dirichlet characters of fixed conductor, whereas
+the census conditions a nonlinear statistic of mutually varying prime moduli.
+
+The multiquadratic field $H$ also occurs naturally in the theory of
+minimally tamely ramified extensions.  Dummit--Kisilevsky show that the
+decomposition data of such multiquadratic fields are governed by quadratic
+residue matrices~\cite{DK}, in the broader minimal-ramification setting of
+Kisilevsky--Sonn~\cite{KS}.  These results explain the role of $H$ but do
+not give the higher $2$-power intersection $F\cap M=H$ proved below.
+
+The Kummer intersection used below is a specialization of the explicit
+theory of Perucca--Sgobba--Tronto~\cite{PST}.  We retain a self-contained
+commutator calculation because it exposes exactly where the exceptional
+$2$-line enters.  Their degree uniformity is in the exponents for each fixed
+finitely generated group $G$; the constants and finite case distinction may
+depend on $G$.  The simultaneous-height problem here requires uniformity on
+the different, unclaimed axis where
+$G=\langle2,p_1,\ldots,p_r\rangle$ gains generators and the radicands grow.
+
+\section{Gauge-reduced character matrices}
+
+\begin{definition}[Raw and gauge-reduced matrices]
+Fix depths $\mathbf t=(t_1,\ldots,t_k)$ and put $N_i=2^{t_i}$.  A raw
+matrix is an off-diagonal array
+\[
+  A=(a_{ij}),\qquad a_{ij}\in\Z/N_i\Z.
+\]
+It is \emph{admissible} if $a_{ij}\equiv a_{ji}\pmod2$ for every
+$i\ne j$.  The gauge group
+\[
+  \mathcal U_{\mathbf t}=\prod_{i=1}^k(\Z/N_i\Z)^\times
+\]
+acts rowwise by $(u_i)\cdot a_{ij}=u_i a_{ij}$.  An admissible
+gauge-reduced matrix is an orbit under this action.
+\end{definition}
+
+The condition is well-defined on orbits because every gauge multiplier is
+odd.  It is necessary for prime matrices by quadratic reciprocity: the
+parity of $\chi_p(q)$ records the Legendre symbol $(q/p)$, and primes in
+$\mathcal H$ are $1\pmod4$.  We use the standard power-residue-symbol
+conventions of Lemmermeyer~\cite[Chapter~4]{Lemmermeyer}; the additive
+coordinate above records the same cyclic quotient while keeping its
+generator ambiguity explicit.
+
+\begin{lemma}[The quotient factors through $p$]\label{lem:factor}
+The reduction map $(\Z/p^2\Z)^\times\to\F_p^\times$ induces an isomorphism
+on maximal $2$-power quotients.  Hence $\chi_p(q)$ may be read from the
+Artin symbol of $q$ in the unique degree-$2^{t_p}$ subfield of
+$\Q(\zeta_p)$.
+\end{lemma}
+
+\begin{proof}
+The kernel has order $p$, which is odd.  It therefore lies in the unique
+odd-order subgroup and disappears in the $2$-primary quotient.
+\end{proof}
+
+\section{The governing compositum}
+
+Fix a realized prefix $P=(p_1,\ldots,p_r)$ and a new depth $t\ge3$.  Put
+$N=2^t$ and
+\[
+  B=\Q(\zeta_{2N}),\qquad B_0=\Q(\zeta_N),\qquad
+  \omega=\zeta_N.
+\]
+For each $i$, let $F_i\subset\Q(\zeta_{p_i})$ be the unique cyclic
+subfield of degree $2^{t_i}$, and set
+\[
+  F=F_1\cdots F_r,\qquad
+  H=\Q(\sqrt{p_1},\ldots,\sqrt{p_r}).
+\]
+Finally choose $\theta_i=p_i^{1/N}$ for $i\ge1$ and the positive
+$\theta_0=2^{1/N}$, so that $\theta_0^{N/2}=\sqrt2$, and set
+\[
+  M=B(\theta_0,\theta_1,\ldots,\theta_r).
+\]
+The field $F$ carries the old-row/new-column coordinates; $M$ carries the
+new row and the condition involving $2$.
+
+\begin{proposition}[The radical and its $2$-line]\label{prop:radical}
+In $B^\times/B^{\times N}$ one has
+\[
+ \langle2,p_1,\ldots,p_r\rangle B^{\times N}/B^{\times N}
+ \cong \Z/(N/2)\Z\oplus(\Z/N\Z)^r.
+\]
+Consequently $[M:B]=N^r(N/2)$.
+\end{proposition}
+
+\begin{proof}
+Suppose $2^{e_0}\prod_i p_i^{e_i}=\beta^N$ in $B$.  The field $B$ is
+ramified only at $2$.  At a prime of $B$ over $p_j$, the normalized
+valuation of $p_j$ is $1$, hence $N\mid e_j$ for every $j$.  Thus no mixed
+relation survives and only the class of $2$ remains.
+
+That class has order at most $N/2$, since
+\[
+  2^{N/2}=(\sqrt2)^N,
+  \qquad \sqrt2=\zeta_8+\zeta_8^{-1}\in B.
+\]
+Its order is not smaller.  Otherwise $2^{N/4}=\beta^N$ for some $\beta$,
+so $2^{1/4}=\beta\zeta$ for an $N$th root of unity $\zeta\in B$.  This
+would embed the non-Galois quartic field $\Q(2^{1/4})$ in the abelian
+extension $B/\Q$, impossible because every subfield of an abelian Galois
+extension is Galois.  Thus the order is exactly $N/2$.
+\end{proof}
+
+The exponent is divisible by $8$, so the exceptional $2$-line behind the
+Grunwald--Wang special case is a mandatory audit rather than a remote
+analogy~\cite{Wang}.  The Kummer calculation here is over
+$B\supset\mu_N$, so no local--global existence theorem is being invoked.
+Instead the possible collapse is computed directly and exhausted: the
+displayed relation gives the single order drop on the $2$-line, while the
+valuation argument and the lower bound from
+$\Q(2^{1/4})\not\subset B$ exclude any second radical relation.  This drop
+will appear below as an even translation coordinate.
+
+\section{The maximal abelian subfield}
+
+Write $T=\Gal(M/B)$.  By Proposition~\ref{prop:radical}, an element of $T$
+has coordinates $c=(c_0,c_1,\ldots,c_r)$ with
+\[
+  \tau_c(\theta_i)=\omega^{c_i}\theta_i,
+  \qquad c_0\equiv0\pmod2.
+\]
+Let $G=\Gal(M/\Q)$.  For $a\in(\Z/2N\Z)^\times$, choose a lift
+$\widetilde\sigma_a$ of $\sigma_a\in\Gal(B/\Q)$ that fixes the
+$\theta_i$ for $i\ge1$ and satisfies
+\[
+  \widetilde\sigma_a(\theta_0)=\omega^{u(a)}\theta_0,
+  \qquad (-1)^{u(a)}=\epsilon(a):=\frac{\sigma_a(\sqrt2)}{\sqrt2}.
+\]
+Such lifts exist by Proposition~\ref{prop:radical}.  Moreover
+\begin{equation}\label{eq:epsilon}
+  \epsilon(a)=1\quad\Longleftrightarrow\quad a\equiv\pm1\pmod8.
+\end{equation}
+
+\begin{proposition}[Maximal abelian subfield]\label{prop:ab}
+One has
+\[
+  [G,G]=\Gal(M/BH),\qquad M^{\mathrm{ab}}=BH.
+\]
+\end{proposition}
+
+\begin{proof}
+Conjugation gives
+$\widetilde\sigma_a\tau_c\widetilde\sigma_a^{-1}=\tau_{ac}$, so
+commutators with $T$ generate
+\[
+  T^2=\{c_0\equiv0\pmod4,\ c_i\equiv0\pmod2\ (i\ge1)\}.
+\]
+The only missing translation is the second bit on the $2$-line.  Use
+left-translation coordinates, with multiplication
+\[
+  (a,u)(b,v)=(ab,u+av).
+\]
+\begin{equation}\label{eq:commutator}
+ [(a,u),(b,v)]=\bigl(1,(a-1)v-(b-1)u\bigr).
+\end{equation}
+For $a=3$ and $b=5$, both $u(3)$ and $u(5)$ are odd by
+\eqref{eq:epsilon}; hence the translation in \eqref{eq:commutator} is
+$2\pmod4$.  Together with $T^2$ this generates
+\[
+  \{c_0\equiv0\pmod2,\ c_i\equiv0\pmod2\ (i\ge1)\}
+  =\Gal(M/BH).
+\]
+The reverse containment follows because $BH/\Q$ is abelian.
+\end{proof}
+
+There is an independent external check.  Apply
+Perucca--Sgobba--Tronto~\cite[Theorem~5.1]{PST} to the positive,
+torsion-free group $\langle2,p_1,\ldots,p_r\rangle$, with their parameters
+$m=t+1$ and $n=t$.  Their formula gives
+\[
+  M\cap\Q^{\cyc}=B(\sqrt2,\sqrt{p_1},\ldots,\sqrt{p_r})=BH.
+\]
+Kronecker--Weber then gives $M^{\mathrm{ab}}=BH$, agreeing with
+Proposition~\ref{prop:ab}.
+
+\begin{corollary}[The only intersection is reciprocity]\label{cor:intersection}
+\[
+  F\cap M=H.
+\]
+\end{corollary}
+
+\begin{proof}
+Since $F/\Q$ is abelian, $F\cap M\subseteq M^{\mathrm{ab}}=BH$.  The field
+$B$ is totally ramified at $2$, whereas $F$ and $H$ are unramified at
+$2$; consequently the inertia-fixed field of $BH$ at $2$ is $H$ and
+$F\cap BH\subseteq H$.  Conversely, $\sqrt{p_i}$ lies in both $F_i$ and
+$M$, so $H\subseteq F\cap M$.
+\end{proof}
+
+The $F_i$ are linearly disjoint over $\Q$: each is ramified only at its
+own prime $p_i$, so an intersection with the compositum of the others would
+be unramified at every finite prime and is therefore $\Q$.  Hence
+\begin{equation}\label{eq:Fdegree}
+  \Gal(F/\Q)\cong\prod_{i=1}^r\Z/2^{t_i}\Z.
+\end{equation}
+
+\section{Frobenius coordinates and the row gauge}
+
+By Corollary~\ref{cor:intersection}, the usual fiber-product description is
+\begin{equation}\label{eq:fiberproduct}
+ \Gal(FM/\Q)\cong
+ \{(\phi,\psi)\in\Gal(F/\Q)\times\Gal(M/\Q):
+   \phi|_H=\psi|_H\}.
+\end{equation}
+Use Lemma~\ref{lem:factor} to choose the $i$th coordinate in
+\eqref{eq:Fdegree} so that the Artin symbol of $q$ is
+$c_i=\chi_{p_i}(q)$.  The restriction of this coordinate to
+$\Q(\sqrt{p_i})$ is $(-1)^{c_i}$.
+
+The reverse coordinates must be read over $B_0$, not over $B$.  If
+$\vtwo(q-1)=t$, then
+\[
+ q\equiv1+N\pmod{2N}.
+\]
+Thus $q$ splits completely in $B_0$ but has residue degree $2$ in $B$.
+The extension $M/B_0$ is Galois: $B/B_0$ is Galois and $B_0$ contains
+$\mu_N$, so every Kummer line used to define $M$ is stable.  Choose
+$\mathfrak q_0\mid q$ in $B_0$ and a prime above it in $M$.  Since
+the relative Frobenius fixes $\omega$, write
+\[
+  \Frob_{\mathfrak q_0}(\theta_i)=\omega^{d_i}\theta_i.
+\]
+Reduction modulo the chosen prime gives
+\[
+  \omega^{d_i}\equiv p_i^{(q-1)/N}\pmod q.
+\]
+If $g$ is a primitive root modulo $q$, then
+$p_i^{(q-1)/N}=(g^{(q-1)/N})^{\chi_q(p_i)}$.  The reduction of $\omega$
+is another generator of the same order-$N$ group.  Therefore
+\begin{equation}\label{eq:rowgauge}
+  (d_1,\ldots,d_r)=u\,(\chi_q(p_1),\ldots,\chi_q(p_r))
+\end{equation}
+for one odd unit $u$ common to the row.
+
+Changing the prime of $B_0$ above the rational prime $q$ changes this unit.
+Changing only the prime of $M$ above a fixed $\mathfrak q_0$ does not:
+an element above $\sigma_{1+N}$ centralizes $T$ because $1+N\equiv1\pmod
+N$.  Thus the ambiguity in \eqref{eq:rowgauge} is exactly the row gauge,
+not an additional quotient.
+
+Finally, the condition in \eqref{eq:fiberproduct} is precisely
+\begin{equation}\label{eq:fiberparity}
+  c_i\equiv d_i\pmod2\qquad(1\le i\le r),
+\end{equation}
+which is quadratic reciprocity and nothing more.
+
+\section{Proof of the exact extension law}
+
+Let $A=\prod_i2^{t_i}=[F:\Q]$.  From the preceding degree calculations,
+\begin{equation}\label{eq:grouporder}
+ [FM:\Q]=\frac{[F:\Q][M:\Q]}{[H:\Q]}
+ =\frac{A\,N^{r+2}}{2^{r+1}}.
+\end{equation}
+Consider the subset $X_{P,t}\subseteq\Gal(FM/\Q)$ defined by
+\[
+ \psi|_B=\sigma_{1+N},\qquad \psi(\theta_0)=\theta_0.
+\]
+This is the exact-depth, odd-$2$-order Frobenius slice.
+
+\begin{lemma}[Every admissible fiber is nonempty]\label{lem:nonempty}
+Given arbitrary $c_i\in\Z/2^{t_i}\Z$ and $d_i\in\Z/N\Z$ satisfying
+\eqref{eq:fiberparity}, there is a unique element of $X_{P,t}$ having those
+coordinates.
+\end{lemma}
+
+\begin{proof}
+Choose $\phi\in\Gal(F/\Q)$ with coordinates $c_i$.  Define $\psi$ by
+\[
+ \psi|_B=\sigma_{1+N},\qquad
+ \psi(\theta_0)=\theta_0,\qquad
+ \psi(\theta_i)=\omega^{d_i}\theta_i.
+\]
+Proposition~\ref{prop:radical} says that the displayed radical relations
+are complete.  The only nontrivial compatibility is
+$\theta_0^{N/2}=\sqrt2$, and it holds because $t\ge3$ gives
+$1+N\equiv1\pmod8$, so $\sigma_{1+N}(\sqrt2)=\sqrt2$.  Thus $\psi$ is an
+automorphism.  On $\sqrt{p_i}$, it acts by $(-1)^{d_i}$; hence
+\eqref{eq:fiberparity} is exactly the condition that $(\phi,\psi)$ belongs
+to the fiber product \eqref{eq:fiberproduct}.  Uniqueness is immediate
+from the generators.
+\end{proof}
+
+There are $A$ choices of $c=(c_i)$ and, for each one, $(N/2)^r$ choices of
+$d=(d_i)$ with matching parity.  Therefore
+\begin{equation}\label{eq:slicesize}
+  |X_{P,t}|=A(N/2)^r.
+\end{equation}
+The slice is stable under conjugacy.  Indeed, the $F$ component and the
+restriction to $B$ are abelian, and conjugating an element above
+$\sigma_{1+N}$ rescales $d$ by one common unit while keeping the
+$\theta_0$ coordinate zero.  In affine notation the possible translation
+term is multiplied by $1-(1+N)$, which vanishes modulo $N$.
+
+Chebotarev applied to the union $X_{P,t}$ now gives~\cite{Neukirch}
+\[
+ \delta_t=\frac{|X_{P,t}|}{[FM:\Q]}
+ =\frac{2}{N^2}=\frac{2}{4^t}.
+\]
+More generally, each raw coordinate vector occurs once in
+$X_{P,t}$, while conjugacy identifies precisely the common row-gauge
+orbits.  Conditional on the slice, Chebotarev therefore gives the
+pushforward of the uniform raw-coordinate distribution.  This proves
+Theorem~\ref{thm:extension}.
+
+For $t=2$, the two requirements are incompatible:
+$1+N=5\pmod8$ sends $\sqrt2$ to $-\sqrt2$ and cannot fix $\theta_0$.
+This proves the depth floor rather than assuming it.  Summing the exact
+slices gives
+\begin{equation}\label{eq:densitysum}
+ \sum_{t\ge3}\frac{2}{4^t}=\frac1{24}.
+\end{equation}
+The interchange of density and sum is harmless: the upper density of
+primes with $\vtwo(p-1)\ge T$ is at most the density
+$2^{1-T}$ of $p\equiv1\pmod{2^T}$, which tends to zero.  Equation
+\eqref{eq:densitysum} agrees with Hasse's density theorem~\cite{Hasse}:
+the odd-order family has density $7/24$, and its $p\equiv7\pmod8$ part has
+density $1/4$, leaving $1/24$ in the $p\equiv1\pmod4$ sector.
+
+\begin{proof}[Proof of Corollary~\ref{cor:realization}]
+Start with the empty prefix and adjoin the vertices in any chosen order.
+For a target gauge class, choose a raw representative.  If the realized
+prefix differs by old-row gauges, rescale the corresponding new column
+coordinates; the transition law is equivariant because odd multiplication
+preserves each parity class.  Lemma~\ref{lem:nonempty} gives a nonempty
+conjugacy class for every admissible extension, and Chebotarev supplies
+infinitely many new primes in it.  Such primes are unramified in the
+compositum and hence distinct from $2,p_1,\ldots,p_r$.  Induction completes
+the realization.
+\end{proof}
+
+\section{The exact iterated matrix law}
+
+The extension theorem canonically determines a finite probability space.
+For $i<j$, put
+\[
+ E_{ij}=\{(a,b)\in\Z/2^{t_i}\Z\times\Z/2^{t_j}\Z:
+                    a\equiv b\pmod2\},
+\]
+and define the raw product measure
+\begin{equation}\label{eq:rawmeasure}
+ \nu^{\mathrm{raw}}_{\mathbf t}
+   =\bigotimes_{i<j}\operatorname{Unif}(E_{ij}).
+\end{equation}
+Let $\nu_{\mathbf t}$ be its pushforward to row-gauge classes.
+
+\begin{theorem}[Iterated law]\label{thm:iterated}
+Fix an ordered depth vector $\mathbf t$.  Draw primes of these depths from
+$\mathcal H$ and take their bounds to infinity successively, with the last
+adjoined prime innermost.  The resulting distribution of gauge-reduced
+character matrices is exactly $\nu_{\mathbf t}$.  It is independent of the
+adjoining order.
+\end{theorem}
+
+\begin{proof}
+For a fixed numerical prefix, Theorem~\ref{thm:extension} supplies the next
+factor
+\[
+  \prod_{i<j}\operatorname{Unif}(E_{ij}),
+\]
+independently of that prefix.  Induction therefore gives
+\eqref{eq:rawmeasure}.  The kernel is equivariant under every old-row gauge,
+which rescales the corresponding new column, and under the new-row gauge,
+which rescales all new-row entries together.  Hence choosing a raw
+representative at an intermediate stage does not affect the final
+pushforward.  Permuting the adjoining order merely permutes the factors in
+\eqref{eq:rawmeasure}.
+\end{proof}
+
+This theorem concerns nested limits.  It does not assert convergence when
+all primes are bounded by one common height: the field $FM$ and its
+discriminant grow with the prefix, and the ordinary Chebotarev theorem used
+above supplies no uniform error term for that regime.
+
+\section{Application to the Barker reciprocity skeleton}
+
+Turyn's character-sum framework supplies classical necessary conditions
+for cyclic difference sets and the Barker problem~\cite{Turyn}.  The
+companion census~\cite{Census} studies gauge-invariant predicates of
+five-vertex character matrices.  A pair $\{i,j\}$ is witnessed by
+$\ell\notin\{i,j\}$ when $a_{\ell i}+a_{\ell j}=0$.  The relevant marked
+cell imposes global covering and true minimality, no zero off-diagonal
+entries, an all-odd cofactor row at a marked depth-$3$ vertex $x$, and
+exactly two pairs witnessed by $x$.  Its success event is
+\[
+  \sigma_x=\sum_{j\ne x}a_{xj}=0\pmod8.
+\]
+Both the cell and success are gauge-invariant.
+
+For a full depth vector $\mathbf t$, let $A(M,x)$ denote that eligibility
+event and define the marked-cell intensity ratio
+\begin{equation}\label{eq:Rit}
+ R^{\itlaw}_{\mathbf t}=
+ \frac{\sum_{x:t_x=3}\nu_{\mathbf t}(A(M,x)\wedge\sigma_x=0)}
+      {\sum_{x:t_x=3}\nu_{\mathbf t}(A(M,x))}.
+\end{equation}
+The numerator and denominator pool marked cells before division; this is
+not the expectation of a per-matrix ratio.
+
+An exhaustive exact contraction of \eqref{eq:rawmeasure} in the companion
+repository gives~\cite{Census}
+\begin{align}
+ R^{\itlaw}_{(3,3,3,3,3)}&=\frac{1373}{5300}=0.2590566\ldots,\\
+ R^{\itlaw}_{(3,3,3,3,4)}&=\frac{1123}{4215}=0.2664294\ldots.
+\end{align}
+The companion paper uses the four-entry cofactor shorthand
+$R(3,3,3,3)$ and $R(3,3,3,4)$ for these two quantities.  Theorem
+\ref{thm:iterated} upgrades their interpretation: they are exact iterated
+arithmetic probabilities, not fitted or Monte Carlo null-model constants.
+
+\begin{corollary}[Scoped Barker consequence]\label{cor:barker}
+No skeleton-admissible pattern is globally absent from tuples of primes in
+$\mathcal H$.  Therefore a proposed Barker argument cannot discard such a
+pattern merely by asserting that its gauge-reduced $2$-power residue matrix
+is arithmetically unrealizable.
+\end{corollary}
+
+This is a realizability statement only.  A realized prime tuple need not be
+the prime support of a Barker candidate, so a Barker-specific necessary
+condition may still cut the realized set.  Nor does the theorem address
+nonabelian, class-group, or higher-cohomological data not determined by the
+matrix.  Finally, it does not explain why a skeleton-admissible state may be
+absent below a finite bound, or why a simultaneous-height census rate may
+differ from \eqref{eq:Rit}.  Those are frequency questions outside the
+support theorem.
+
+\section{Computational guardrail and freeze boundary}
+
+The proof is algebraic.  A deterministic program accompanies it only as a
+falsification harness.  It checks the affine commutator through depths
+$2$--$6$, the predicted derived subgroup, the exact slice cardinality for
+multiple prefix ranks, conjugacy as common row scaling, and $56$
+non-vacuous identifications between the repository's $\chi$ coordinates
+and the Kummer residue in \eqref{eq:rowgauge}.  A sieve over all
+$1{,}270{,}607$ primes below $2\cdot10^7$ gives the exact-depth counts
+\[
+\begin{array}{c|rrrrr}
+t&3&4&5&6&7\\ \hline
+\#&39711&9939&2536&619&156
+\end{array}
+\]
+and zero at $t=2$, totaling $53008$ primes in the $1\pmod4$ sector.  These
+values reproduce the theorem's density slices numerically; they are not
+used as evidence for the proof.
+
+The reproducibility layer is also part of the methodological comparison.
+The benchmark Barker computations of Mossinghoff and of
+Borwein--Mossinghoff publish search data and candidate lists and describe
+their algorithms~\cite{BM1,BM2}.  They do not describe an executable
+end-to-end reproduction driver or an independent implementation of the
+arithmetic primitives.  The 2014 sequel itself reports that an earlier
+implementation of Tarjan's circuit-enumeration algorithm~\cite{Tarjan}
+missed cycles, and that earlier software for Turyn's test could not resolve
+some cases~\cite{BM2}.  The fail-closed driver, pinned artifacts, regression
+suite, and clean-room arithmetic path accompanying the census are designed
+around that documented failure mode.  This is a reproducibility advantage,
+not a claim of priority over the earlier computations.
+
+The program is
+\texttt{barker\_k6\_bundle/research/realization\_checks.py}; its stable output
+is \texttt{\_realization\_checks.json}.  The publication freeze excludes
+three attractive but logically separate projects:
+\begin{enumerate}
+  \item a simultaneous-height convergence or bias theorem;
+  \item larger Barker censuses or targeted motif enumeration;
+  \item combinatorial mechanisms for eligibility-weighting effects in the
+  exact skeleton.
+\end{enumerate}
+Each requires new analytic theory or a new scalable algorithm.  None can
+alter Theorems~\ref{thm:extension} and~\ref{thm:iterated}, and none is
+needed for Corollary~\ref{cor:barker} at its stated scope.
+
+\section*{Acknowledgment of scope}
+
+The central intersection formula is independently covered by the explicit
+Kummer theory of Perucca--Sgobba--Tronto~\cite{PST}.  The contribution here
+is the gauge-reduced residue-matrix formulation, the exact Frobenius slice
+and transition law, the iterated product law, and their scoped application
+to the Barker reciprocity skeleton.  The paper makes no claim to solve the
+even Barker conjecture.
+
+\begin{thebibliography}{99}
+
+\bibitem{BM1}
+M.~J. Mossinghoff,
+\emph{Wieferich pairs and Barker sequences},
+Des. Codes Cryptogr. \textbf{53} (2009), no.~3, 149--163,
+\href{https://doi.org/10.1007/s10623-009-9301-3}{doi:10.1007/s10623-009-9301-3}.
+
+\bibitem{BM2}
+P.~Borwein and M.~J. Mossinghoff,
+\emph{Wieferich pairs and Barker sequences, II},
+LMS J. Comput. Math. \textbf{17} (2014), no.~1, 24--32,
+\href{https://doi.org/10.1112/S1461157013000223}{doi:10.1112/S1461157013000223}.
+
+\bibitem{Census}
+M.~Alhazmi,
+\emph{Minimal covering configurations of hard primes: a cofactor-cycle
+theorem and the arithmetic floor of a 2-primary census}, preprint and
+reproducibility archive, 2026.
+
+\bibitem{DDK}
+D.~S. Dummit, E.~P. Dummit, and H.~Kisilevsky,
+\emph{Characterizations of quadratic, cubic, and quartic residue matrices},
+J. Number Theory \textbf{168} (2016), 167--179,
+\href{https://doi.org/10.1016/j.jnt.2016.04.014}{doi:10.1016/j.jnt.2016.04.014}.
+
+\bibitem{DK}
+D.~S. Dummit and H.~Kisilevsky,
+\emph{Decomposition types in minimally tamely ramified extensions of
+$\Q$}, Res. Number Theory \textbf{3} (2017), article 24,
+\href{https://doi.org/10.1007/s40993-017-0085-7}{doi:10.1007/s40993-017-0085-7}.
+
+\bibitem{DummitFF}
+E.~P. Dummit,
+\emph{Characterizations of the $d$th-power residue matrices over finite
+fields}, arXiv:1809.10225 (2018),
+\href{https://arxiv.org/abs/1809.10225}{arXiv:1809.10225}.
+
+\bibitem{DGK}
+D.~S. Dummit, A.~Granville, and H.~Kisilevsky,
+\emph{Big biases amongst products of two primes},
+Mathematika \textbf{62} (2016), no.~2, 502--507,
+\href{https://doi.org/10.1112/S0025579315000339}{doi:10.1112/S0025579315000339}.
+
+\bibitem{Hasse}
+H.~Hasse,
+\emph{\"Uber die Dichte der Primzahlen $p$, f\"ur die eine vorgegebene
+ganzrationale Zahl $a\ne0$ von gerader bzw. ungerader Ordnung mod. $p$ ist},
+Math. Ann. \textbf{166} (1966), 19--23.
+
+\bibitem{KS}
+H.~Kisilevsky and J.~Sonn,
+\emph{On the minimal ramification problem for $\ell$-groups},
+Compos. Math. \textbf{146} (2010), no.~3, 599--606.
+
+\bibitem{Lemmermeyer}
+F.~Lemmermeyer,
+\emph{Reciprocity Laws: From Euler to Eisenstein}, Springer Monographs in
+Mathematics, Springer, 2000.
+
+\bibitem{Neukirch}
+J.~Neukirch,
+\emph{Algebraic Number Theory}, Grundlehren der mathematischen
+Wissenschaften 322, Springer, 1999.
+
+\bibitem{PST}
+A.~Perucca, P.~Sgobba, and S.~Tronto,
+\emph{Explicit Kummer theory for the rational numbers},
+Int. J. Number Theory \textbf{16} (2020), no.~10, 2213--2231,
+\href{https://doi.org/10.1142/S1793042120501146}{doi:10.1142/S1793042120501146}.
+
+\bibitem{Schinzel75}
+A.~Schinzel,
+\emph{On power residues and exponential congruences},
+Acta Arith. \textbf{27} (1975), 397--420.
+
+\bibitem{Schinzel77}
+A.~Schinzel,
+\emph{Abelian binomials, power residues and exponential congruences},
+Acta Arith. \textbf{32} (1977), 245--274,
+\href{https://doi.org/10.4064/aa-32-3-245-274}{doi:10.4064/aa-32-3-245-274}.
+
+\bibitem{Schinzel80}
+A.~Schinzel,
+\emph{Addendum and corrigendum to ``Abelian binomials, power residues and
+exponential congruences''}, Acta Arith. \textbf{36} (1980), 101--104,
+\href{https://doi.org/10.4064/aa-36-1-101-104}{doi:10.4064/aa-36-1-101-104}.
+
+\bibitem{Tarjan}
+R.~Tarjan,
+\emph{Enumeration of the elementary circuits of a directed graph},
+SIAM J. Comput. \textbf{2} (1973), no.~3, 211--216,
+\href{https://doi.org/10.1137/0202017}{doi:10.1137/0202017}.
+
+\bibitem{Turyn}
+R.~J. Turyn,
+\emph{Character sums and difference sets},
+Pacific J. Math. \textbf{15} (1965), 319--346.
+
+\bibitem{Wang}
+S.~Wang,
+\emph{On Grunwald's theorem},
+Ann. of Math. (2) \textbf{51} (1950), 471--484,
+\href{https://doi.org/10.2307/1969335}{doi:10.2307/1969335}.
+
+\end{thebibliography}
+
+\end{document}

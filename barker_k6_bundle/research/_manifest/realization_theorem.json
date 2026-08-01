@@ -1,0 +1,50 @@
+{
+  "claims": [
+    "Companion realization paper, finite guardrail only: affine commutator and derived-subgroup identities through depths 2..6, 20 exact Frobenius-slice counts, and 56 non-vacuous Kummer/chi coordinate checks. These falsify finite algebra or convention errors but do not replace the number-field proof",
+    "Companion realization paper, numerical validation of Proposition B below 20,000,000: 1,270,607 primes, 53,008 primes in the p == 1 (mod 4), ord_p(2) odd family, no exact-depth-2 member, and depth-3..7 counts 39,711 / 9,939 / 2,536 / 619 / 156"
+  ],
+  "command": [
+    "python3",
+    "barker_k6_bundle/research/realization_checks.py"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {},
+  "name": "realization_theorem",
+  "outputs": {
+    "_realization_checks.json": "54481068ac38a05dea5bac9bdadf3429f747a954cf1d80e373abf82c1a91b974"
+  },
+  "parameters": {
+    "affine_depths_passed": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "all_checks_passed": true,
+    "coordinate_pair_checks": 56,
+    "depth_2_count": 0,
+    "depth_3_count": 39711,
+    "depth_4_count": 9939,
+    "depth_5_count": 2536,
+    "depth_6_count": 619,
+    "depth_7_count": 156,
+    "hard_count_p_1_mod_4": 53008,
+    "prime_bound_exclusive": 20000000,
+    "prime_count": 1270607,
+    "slice_count_cases": 20
+  },
+  "schema_version": 1,
+  "seeds": [],
+  "sources": {
+    "../../tests/test_realization_checks.py": "70ecad820f35e1176f6d61522f441d4f2b77d3cf459b8ab32edd2c7babe5a2e3",
+    "realization_checks.py": "c8c1befcc53656b53d7cd421eddff28f5ac0590da7673b4cd83dc657a88a0954"
+  },
+  "tree_dirty": false
+}

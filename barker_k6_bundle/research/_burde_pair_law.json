@@ -1,0 +1,42 @@
+{
+  "population": {
+    "universe": 320,
+    "depth3_primes": 250,
+    "even_sector_pairs": 15564,
+    "pairs_after_zero_delta": 8734,
+    "equals_We_sum": true
+  },
+  "identity": {
+    "holds": 8734,
+    "of": 8734,
+    "four_forms_equivalent": 8734,
+    "four_forms_are_one_identity": true
+  },
+  "rhs_split": {
+    "+1": 4994,
+    "-1": 3740
+  },
+  "joint": {
+    "(-1, -1)": 3940,
+    "(-1, 1)": 1824,
+    "(1, -1)": 1916,
+    "(1, 1)": 1054
+  },
+  "marginals": {
+    "(q/p)_4=+1": 0.3401,
+    "(p/q)_4=+1": 0.3295
+  },
+  "agreement_count": 4994,
+  "sign_choice_invariant": 8734,
+  "applicability": {
+    "cofactor_patterns_with_even_edge": 63,
+    "cofactor_patterns_total": 64,
+    "hub_cofactor_edges_applicable": 0,
+    "hub_cofactor_edges_total": 4
+  },
+  "negative_controls": {
+    "scrambled_pairing": 0.5065,
+    "perturbed_rhs": 0.5
+  },
+  "boundary": "identifies the even-sector quartic-bit agreement with the sign of (ad-bc)/q; does NOT explain the +1 bias, the ordered-joint asymmetry, or anything about the odd hub-cofactor edges carrying sigma_x"
+}

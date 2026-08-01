@@ -1,0 +1,58 @@
+{
+  "model": "reciprocity-symmetric skeleton, exact (no Monte Carlo)",
+  "estimand": "P(\u03c3_x = 0 | all-QNR cofactor, w_x = 2, hub depth 3) on zero-\u03b4 minimal coverings; cells pooled over depth-3 hubs and all 1024 labeled parity graphs",
+  "R_A_3333": {
+    "fraction": "1373/5300",
+    "decimal": 0.2590566037735849
+  },
+  "R_B_3334": {
+    "fraction": "1123/4215",
+    "decimal": 0.266429418742586
+  },
+  "cells": {
+    "A": [
+      674856960,
+      2605056000
+    ],
+    "B": [
+      3753443328,
+      14087946240
+    ]
+  },
+  "survivor_mass": {
+    "A": 1563676448,
+    "B": 11069605152
+  },
+  "acceptance_probability": {
+    "A": {
+      "fraction": "48864889/35184372088832",
+      "decimal": 1.388823676506945e-06
+    },
+    "B": {
+      "fraction": "345925161/562949953421312",
+      "decimal": 6.144865256629828e-07
+    }
+  },
+  "support": {
+    "labeled_structures": 5445769,
+    "s5_orbits": 45580,
+    "s4_marked_orbits": 227200,
+    "s5_orbits_realizable_A": 1833,
+    "s4_orbits_realizable_B": 9013
+  },
+  "checks": {
+    "row_controls_w5_w4_parity": "PASS",
+    "row_mass_sums": "PASS",
+    "baseline_qnr_w2": "24/120 = 1/5",
+    "baseline_all_t3_w2": "108/468 = 3/13",
+    "k4_brute_force_agreement": "PASS (64 graphs, total=48992)",
+    "predicate_popcount": 5445769,
+    "predicate_boolean_reference_20k": "PASS",
+    "hub1_equals_permuted_hub0": "PASS",
+    "labeled_vs_orbit": "PASS (34 unlabeled classes; A constant on S5 classes: True; B constant on vertex-4-marked classes: True)",
+    "depth_perm_invariance": "PASS",
+    "mc_e1": "MC 2395/9267 = 0.2584 over 5484 matrices; exact 0.259057; |diff| = 0.0006",
+    "mc_e1deep": "MC 3146/11821 = 0.2661 over 9214 matrices; exact 0.266429; |diff| = 0.0003",
+    "support_mass_equals_survivor_mass": "PASS"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "universe": {
+    "n_hard_primes": 44,
+    "max_prime": 10937,
+    "all_QR_triangles": 1696
+  },
+  "chi_structure": {
+    "homomorphism": true,
+    "factors_through_Zx": true,
+    "bit0_is_legendre": true
+  },
+  "generator_rescaling": {
+    "x": 73,
+    "units": {
+      "11": 7,
+      "13": 3,
+      "14": 1
+    }
+  },
+  "symbol_validation": {
+    "solution_independent": [
+      120,
+      120
+    ],
+    "s3_symmetric": [
+      120,
+      120
+    ]
+  },
+  "distribution": {
+    "+1": 847,
+    "-1": 849
+  },
+  "determination": {
+    "invariant_classes": 1225,
+    "testable_classes": 270,
+    "mixed_sign_classes": 167
+  },
+  "counterexample": {
+    "invariant_class": "((3, 0, 0), (3, 0, 2), (3, 2, 0))",
+    "minus": [
+      4057,
+      4201,
+      6553
+    ],
+    "plus": [
+      4409,
+      5209,
+      5689
+    ]
+  },
+  "applicability": {
+    "patterns_by_all_QR_triangles": {
+      "0": 41,
+      "1": 16,
+      "2": 6,
+      "4": 1
+    },
+    "patterns_with_at_least_one": 23,
+    "patterns_total": 64,
+    "hub_cofactor_triples_applicable": 0,
+    "hub_cofactor_triples_total": 6
+  },
+  "verdict": "falsified: the Redei symbol is not a function of the normalisation-invariant chi data, and is undefined on the hub triangles carrying the deciding all-QNR observable"
+}

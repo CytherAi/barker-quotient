@@ -1,0 +1,64 @@
+{
+  "claims": [
+    "Q6.2.G branch-pruning: classical R\u00e9dei symbols are NOT functions of the normalisation-invariant \u03c7-data \u2014 167 of the 270 invariant classes holding at least two of the 1,696 all-QR triangles carry both signs, e.g. (4057, 4201, 6553) and (4409, 5209, 5689) share an invariant class with opposite symbols",
+    "Q6.2.G branch-pruning: classical R\u00e9dei symbols are NOT defined on the hub triangles carrying the deciding all-QNR observable \u2014 the gate forces the hub's four edges odd, so 0 of 6 hub-cofactor triples meet the pairwise-trivial Hilbert side conditions, and only 23 of 64 cofactor parity patterns contain any all-QR triangle",
+    "symbol validation: the computed symbol is independent of which primitive conic solution is used and is S\u2083-symmetric (120/120 each) \u2014 R\u00e9dei's defining property, so the normalisation is right",
+    "\u03c7_x is a homomorphism factoring through (Z/x)*, and a different primitive root rescales \u03c7_x by one odd unit, so the only normalisation-invariant content of a pair is v\u2082(\u03c7_x(p))"
+  ],
+  "command": [
+    "python3",
+    "barker_k6_bundle/research/redei_bridge.py"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {},
+  "name": "redei_bridge",
+  "outputs": {
+    "_redei_bridge.json": "abdd96f5d748e3efab78398b690be452e4565d87b82c0d485159e6707f8e696a"
+  },
+  "parameters": {
+    "all_QR_triangles": 1696,
+    "cofactor_patterns_total": 64,
+    "cofactor_patterns_with_all_QR_triangle": 23,
+    "counterexample_minus": [
+      4057,
+      4201,
+      6553
+    ],
+    "counterexample_plus": [
+      4409,
+      5209,
+      5689
+    ],
+    "distribution": {
+      "+1": 847,
+      "-1": 849
+    },
+    "hub_cofactor_triples_applicable": 0,
+    "invariant_classes": 1225,
+    "max_prime": 10937,
+    "mixed_sign_classes": 167,
+    "n_hard_primes": 44,
+    "s3_symmetric": [
+      120,
+      120
+    ],
+    "solution_independent": [
+      120,
+      120
+    ],
+    "testable_classes": 270
+  },
+  "schema_version": 1,
+  "seeds": [],
+  "sources": {
+    "../../tests/test_redei_bridge.py": "7bc8e932c30f20ce1062b36249b6dbe35ac04784975aa51202eab2edc68ab433",
+    "redei_bridge.py": "78a99966f528efce07764757190a2edbf0547973a98cadd69b0795ddaeb68364"
+  },
+  "tree_dirty": false
+}

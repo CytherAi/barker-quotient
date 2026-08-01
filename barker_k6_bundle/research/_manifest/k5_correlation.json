@@ -1,0 +1,51 @@
+{
+  "claims": [
+    "\u00a76.2 (i) aggregate joint-elimination table",
+    "\u00a76.2 (ii) conditional \u03b1_both table",
+    "\u00a76.2 (ii) conditional (\u03b1_both, \u03b1_asymm, \u03b1_none) table",
+    "\u00a76.2 (iii) cofactor-sharing reading",
+    "Proposition 6.2.1 empirical check (profile (0,1,2) \u2192 0)"
+  ],
+  "command": [
+    "python3",
+    "barker_k6_bundle/research/k5_correlation.py",
+    "{N}",
+    "--check"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {
+    "_per_depth_w2_cache_N100.json": "09bf695f8718e22eb4109a09e6732dc5f3a5453dad108ca139415f05923f2571",
+    "_per_depth_w2_cache_N120.json": "83f1e18783b4d3b2d29479b40b4494cbf5cb1c7d791b981af0e10e3588d7d741",
+    "_per_depth_w2_cache_N140.json": "552552363e2abefa3b931245ba675abead81d5f45f2fb10c282b661f61ee4590",
+    "_per_depth_w2_cache_N160.json": "d3878cc8f3626ef9da01cd2b6029b14bf3bccb9c6971bec9d6de9499d6e3dcf0"
+  },
+  "name": "k5_correlation",
+  "outputs": {
+    "_k5_correlation_N100.json": "918fc9ab871f5bd2dc4bff371d28765cfba10494fa14f90156f3172429614d70",
+    "_k5_correlation_N120.json": "adf1072485784f755343b5528e29e6fd6accae18c4a2f89a93539b364f70541b",
+    "_k5_correlation_N140.json": "61b6293bc58c578510e3294b7b3d167202cd9f78f52abd99366aa32e2be1f6b4",
+    "_k5_correlation_N160.json": "ef4561eae9fe7b2fc8005dc15187108ff8edc4da42e753b834af31efea060fc0"
+  },
+  "parameters": {
+    "N": [
+      100,
+      120,
+      140,
+      160
+    ]
+  },
+  "schema_version": 1,
+  "seeds": [],
+  "sources": {
+    "_common.py": "9a4cac239e1520827e8e251c2eaa6fe0003b2864267dcfc1208cbb7ec5a81323",
+    "k5_correlation.py": "ebaf5269f735382cfc8c5596402d1ead3c8d4e10d759c321f410f570f9b141cb",
+    "per_depth_w2.py": "6abe2db9d9b435839e3a627d1d96c4960d1eba5047d82e750a294eeaea45c58b"
+  },
+  "tree_dirty": false
+}

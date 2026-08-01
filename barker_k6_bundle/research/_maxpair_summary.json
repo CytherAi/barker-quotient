@@ -1,0 +1,53 @@
+{
+  "survivors": 9205,
+  "contributors": 5732,
+  "successes": 3003,
+  "targets": 11550,
+  "by_hub": [
+    [
+      785,
+      2921
+    ],
+    [
+      745,
+      2885
+    ],
+    [
+      727,
+      2835
+    ],
+    [
+      746,
+      2909
+    ]
+  ],
+  "R": 0.26,
+  "generation": {
+    "N_universe": 320,
+    "trials_per_seed": 1500000000,
+    "batch": 2000000,
+    "seeds": [
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510
+    ]
+  },
+  "cluster_se": 0.00434,
+  "cluster_ci95": [
+    0.2516,
+    0.2685
+  ],
+  "independent_digit_constant": 0.266429,
+  "constant_inside_ci": true,
+  "exact_pooled": 0.2663959,
+  "exact_inside_ci": true,
+  "point_below_exact_se": 1.47,
+  "observed_census": 0.2498
+}

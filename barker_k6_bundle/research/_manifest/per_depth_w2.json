@@ -1,0 +1,50 @@
+{
+  "claims": [
+    "Corollary 4.9 per-(t, w) conditional rate table",
+    "\u00a76.2 w_x = 2 rate trajectory across N = 100..160",
+    "k = 5 zero-\u03b4 enumeration counts per universe"
+  ],
+  "command": [
+    "python3",
+    "barker_k6_bundle/research/per_depth_w2.py",
+    "{N}"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {},
+  "name": "per_depth_w2",
+  "outputs": {
+    "_per_depth_w2_cache_N100.json": "09bf695f8718e22eb4109a09e6732dc5f3a5453dad108ca139415f05923f2571",
+    "_per_depth_w2_cache_N120.json": "83f1e18783b4d3b2d29479b40b4494cbf5cb1c7d791b981af0e10e3588d7d741",
+    "_per_depth_w2_cache_N140.json": "552552363e2abefa3b931245ba675abead81d5f45f2fb10c282b661f61ee4590",
+    "_per_depth_w2_cache_N160.json": "d3878cc8f3626ef9da01cd2b6029b14bf3bccb9c6971bec9d6de9499d6e3dcf0",
+    "_per_depth_w2_cache_N200.json": "fea08b6341563289771f0a4cd66eddb25967ba693b7f787c925c55c0ed782dbc",
+    "_per_depth_w2_cache_N240.json": "db4770220bb4d2466b08f4d250ccd43d9fbcf6a285a370078037c37892f25b1f",
+    "_per_depth_w2_cache_N280.json": "384633cc1a0c7e95b55ca270f9acebb5bc71c7f1bb18f3c7407e7462955011d0",
+    "_per_depth_w2_cache_N80.json": "76092c660f60abaebbb4d033ff8e8fce5de109dba5bf315ed1b6fb0276c435e8"
+  },
+  "parameters": {
+    "N": [
+      80,
+      100,
+      120,
+      140,
+      160,
+      200,
+      240,
+      280
+    ]
+  },
+  "schema_version": 1,
+  "seeds": [],
+  "sources": {
+    "_common.py": "9a4cac239e1520827e8e251c2eaa6fe0003b2864267dcfc1208cbb7ec5a81323",
+    "per_depth_w2.py": "6abe2db9d9b435839e3a627d1d96c4960d1eba5047d82e750a294eeaea45c58b"
+  },
+  "tree_dirty": false
+}

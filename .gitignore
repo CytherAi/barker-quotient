@@ -1,0 +1,42 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# macOS Finder droppings
+.DS_Store
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*~
+*.bak
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Temporary
+/tmp/
+*.tmp
+
+# Private / local-only working artifacts (cover letters, talk drafts,
+# follow-on paper drafts, internal notes). Never committed.
+submission/
+.local/
+private/
+DRAFT_*.md
+cover_letter*
+*_cover_letter*

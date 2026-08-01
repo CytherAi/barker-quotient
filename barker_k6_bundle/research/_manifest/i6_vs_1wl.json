@@ -1,0 +1,31 @@
+{
+  "claims": [
+    "\u00a75.6 agreement table (26094 / 89 / 0 / 5426)",
+    "\u00a75.6 Observation 5.4 (1-WL strictly refines I_6)"
+  ],
+  "command": [
+    "python3",
+    "barker_k6_bundle/research/i6_vs_1wl.py"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {
+    "_enumeration_cache.json": "911a2e860fdcca88b7d79ec64ca8ae57c7deccb7ec16cab411882ad26e591c9a"
+  },
+  "name": "i6_vs_1wl",
+  "outputs": {},
+  "parameters": {},
+  "schema_version": 1,
+  "seeds": [],
+  "sources": {
+    "_common.py": "9a4cac239e1520827e8e251c2eaa6fe0003b2864267dcfc1208cbb7ec5a81323",
+    "discrimination_depth.py": "cdd5147e1e653b3014eba76ab939f187182c3274763468eb0c3195ab4798b5ec",
+    "i6_vs_1wl.py": "928bea69acc167bb7c6fc0c09418c79e1a31dcf03870957e0b06233d2ceea559"
+  },
+  "tree_dirty": false
+}

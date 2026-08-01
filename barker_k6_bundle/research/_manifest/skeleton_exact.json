@@ -1,0 +1,42 @@
+{
+  "claims": [
+    "\u00a76.2 exact skeleton constants R(3,3,3,3) = 1373/5300 and R(3,3,3,4) = 1123/4215 (Question 6.2.B\u2032, resolved)",
+    "\u00a76.2 depth-flatness exactly false: +32941/4467900 = +0.7373 pp",
+    "\u00a76.2 Question 6.2.G conditioned support: 5,445,769 labeled structures; 45,580 S5 orbits; 1,833 / 9,013 parity-realizable"
+  ],
+  "command": [
+    "python3",
+    "skeleton_exact/exact_dp.py"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {},
+  "name": "skeleton_exact",
+  "outputs": {
+    "../../skeleton_exact/_exact_results.json": "450b2bfa92d02187cfc5f172ed7fc09797af4a029d2875a6ff5b4033100d04ad",
+    "../../skeleton_exact/_per_graph.npz": "12d8860c9d5980a70378b6219c9fbf80388ab396a78c7adbdccbefce1f092ba8",
+    "../../skeleton_exact/_support.npz": "eeb8e6bdcc7488c7b33078ab8f67a88b7291c2562d51164d309af8258aebf67c"
+  },
+  "parameters": {
+    "R_3333": "1373/5300",
+    "R_3334": "1123/4215",
+    "flatness_gap": "32941/4467900",
+    "labeled_structures": 5445769,
+    "s4_marked_orbits": 227200,
+    "s4_orbits_realizable_B": 9013,
+    "s5_orbits": 45580,
+    "s5_orbits_realizable_A": 1833
+  },
+  "schema_version": 1,
+  "seeds": [],
+  "sources": {
+    "../../skeleton_exact/exact_dp.py": "78ad24c83690620216190183f2f827be6860e8856e889e863e5b35570ca38292",
+    "../../skeleton_exact/test_exact_dp.py": "fe5467a3d2e66523ec96c4eec6ce7724a9dc6799a9f19aa44474635aebe7cdaa"
+  },
+  "tree_dirty": false
+}

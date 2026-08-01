@@ -1,0 +1,427 @@
+{
+  "affine_depths_passed": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "affine_group": [
+    {
+      "N": 4,
+      "commutator_formula": true,
+      "delta_3_5": 2,
+      "delta_mod_4": 2,
+      "derived_subgroup_exact": true,
+      "derived_subgroup_size": 8,
+      "epsilon_homomorphism": true,
+      "exact_depth_conjugacy_is_row_gauge": true,
+      "expected_derived_subgroup_size": 8,
+      "extra_two_line": true,
+      "gauge_checks": 64,
+      "lift_parity": true,
+      "t": 2
+    },
+    {
+      "N": 8,
+      "commutator_formula": true,
+      "delta_3_5": 6,
+      "delta_mod_4": 2,
+      "derived_subgroup_exact": true,
+      "derived_subgroup_size": 64,
+      "epsilon_homomorphism": true,
+      "exact_depth_conjugacy_is_row_gauge": true,
+      "expected_derived_subgroup_size": 64,
+      "extra_two_line": true,
+      "gauge_checks": 512,
+      "lift_parity": true,
+      "t": 3
+    },
+    {
+      "N": 16,
+      "commutator_formula": true,
+      "delta_3_5": 14,
+      "delta_mod_4": 2,
+      "derived_subgroup_exact": true,
+      "derived_subgroup_size": 512,
+      "epsilon_homomorphism": true,
+      "exact_depth_conjugacy_is_row_gauge": true,
+      "expected_derived_subgroup_size": 512,
+      "extra_two_line": true,
+      "gauge_checks": 4096,
+      "lift_parity": true,
+      "t": 4
+    },
+    {
+      "N": 32,
+      "commutator_formula": true,
+      "delta_3_5": 30,
+      "delta_mod_4": 2,
+      "derived_subgroup_exact": true,
+      "derived_subgroup_size": 4096,
+      "epsilon_homomorphism": true,
+      "exact_depth_conjugacy_is_row_gauge": true,
+      "expected_derived_subgroup_size": 4096,
+      "extra_two_line": true,
+      "gauge_checks": 32768,
+      "lift_parity": true,
+      "t": 5
+    },
+    {
+      "N": 64,
+      "commutator_formula": true,
+      "delta_3_5": 62,
+      "delta_mod_4": 2,
+      "derived_subgroup_exact": true,
+      "derived_subgroup_size": 32768,
+      "epsilon_homomorphism": true,
+      "exact_depth_conjugacy_is_row_gauge": true,
+      "expected_derived_subgroup_size": 32768,
+      "extra_two_line": true,
+      "gauge_checks": 262144,
+      "lift_parity": true,
+      "t": 6
+    }
+  ],
+  "all_checks_passed": true,
+  "character_coordinates": {
+    "hard_primes": [
+      73,
+      89,
+      233,
+      337,
+      601,
+      881,
+      937,
+      1289
+    ],
+    "hardness_coordinates_zero": 8,
+    "kummer_coordinate_identity": true,
+    "nonzero_coordinates": 51,
+    "odd_coordinates": 30,
+    "ordered_pair_checks": 56,
+    "quadratic_parity_identity": true
+  },
+  "coordinate_pair_checks": 56,
+  "density_slices": {
+    "by_depth": {
+      "10": {
+        "count": 2,
+        "observed_over_all_primes": 1.5740508276752764e-06,
+        "theorem_density": 1.9073486328125e-06
+      },
+      "11": {
+        "count": 1,
+        "observed_over_all_primes": 7.870254138376382e-07,
+        "theorem_density": 4.76837158203125e-07
+      },
+      "2": {
+        "count": 0,
+        "observed_over_all_primes": 0.0,
+        "theorem_density": 0.0
+      },
+      "3": {
+        "count": 39711,
+        "observed_over_all_primes": 0.03125356620890645,
+        "theorem_density": 0.03125
+      },
+      "4": {
+        "count": 9939,
+        "observed_over_all_primes": 0.007822245588132286,
+        "theorem_density": 0.0078125
+      },
+      "5": {
+        "count": 2536,
+        "observed_over_all_primes": 0.0019958964494922508,
+        "theorem_density": 0.001953125
+      },
+      "6": {
+        "count": 619,
+        "observed_over_all_primes": 0.00048716873116549806,
+        "theorem_density": 0.00048828125
+      },
+      "7": {
+        "count": 156,
+        "observed_over_all_primes": 0.00012277596455867156,
+        "theorem_density": 0.0001220703125
+      },
+      "8": {
+        "count": 33,
+        "observed_over_all_primes": 2.597183865664206e-05,
+        "theorem_density": 3.0517578125e-05
+      },
+      "9": {
+        "count": 11,
+        "observed_over_all_primes": 8.657279552214021e-06,
+        "theorem_density": 7.62939453125e-06
+      }
+    },
+    "depth_2_zero": true,
+    "hard_count_p_1_mod_4": 53008,
+    "observed_total_density": 0.04171864313670553,
+    "prime_bound_exclusive": 20000000,
+    "prime_count": 1270607,
+    "theorem_total_density": 0.041666666666666664
+  },
+  "schema_version": 1,
+  "scope": "Deterministic falsification harness for finite algebra and coordinate identifications; not a proof of the number-field theorem.",
+  "slice_count_cases": 20,
+  "slice_counts": [
+    {
+      "density": "1/32",
+      "density_reduced": "1/32",
+      "equals_2_over_4t": true,
+      "group_order": 32,
+      "prefix_depths": [],
+      "rank": 0,
+      "slice_size": 1,
+      "t": 3
+    },
+    {
+      "density": "32/1024",
+      "density_reduced": "1/32",
+      "equals_2_over_4t": true,
+      "group_order": 1024,
+      "prefix_depths": [
+        3
+      ],
+      "rank": 1,
+      "slice_size": 32,
+      "t": 3
+    },
+    {
+      "density": "2048/65536",
+      "density_reduced": "1/32",
+      "equals_2_over_4t": true,
+      "group_order": 65536,
+      "prefix_depths": [
+        3,
+        4
+      ],
+      "rank": 2,
+      "slice_size": 2048,
+      "t": 3
+    },
+    {
+      "density": "262144/8388608",
+      "density_reduced": "1/32",
+      "equals_2_over_4t": true,
+      "group_order": 8388608,
+      "prefix_depths": [
+        3,
+        4,
+        5
+      ],
+      "rank": 3,
+      "slice_size": 262144,
+      "t": 3
+    },
+    {
+      "density": "8388608/268435456",
+      "density_reduced": "1/32",
+      "equals_2_over_4t": true,
+      "group_order": 268435456,
+      "prefix_depths": [
+        3,
+        4,
+        5,
+        3
+      ],
+      "rank": 4,
+      "slice_size": 8388608,
+      "t": 3
+    },
+    {
+      "density": "1/128",
+      "density_reduced": "1/128",
+      "equals_2_over_4t": true,
+      "group_order": 128,
+      "prefix_depths": [],
+      "rank": 0,
+      "slice_size": 1,
+      "t": 4
+    },
+    {
+      "density": "64/8192",
+      "density_reduced": "1/128",
+      "equals_2_over_4t": true,
+      "group_order": 8192,
+      "prefix_depths": [
+        3
+      ],
+      "rank": 1,
+      "slice_size": 64,
+      "t": 4
+    },
+    {
+      "density": "8192/1048576",
+      "density_reduced": "1/128",
+      "equals_2_over_4t": true,
+      "group_order": 1048576,
+      "prefix_depths": [
+        3,
+        4
+      ],
+      "rank": 2,
+      "slice_size": 8192,
+      "t": 4
+    },
+    {
+      "density": "2097152/268435456",
+      "density_reduced": "1/128",
+      "equals_2_over_4t": true,
+      "group_order": 268435456,
+      "prefix_depths": [
+        3,
+        4,
+        5
+      ],
+      "rank": 3,
+      "slice_size": 2097152,
+      "t": 4
+    },
+    {
+      "density": "134217728/17179869184",
+      "density_reduced": "1/128",
+      "equals_2_over_4t": true,
+      "group_order": 17179869184,
+      "prefix_depths": [
+        3,
+        4,
+        5,
+        3
+      ],
+      "rank": 4,
+      "slice_size": 134217728,
+      "t": 4
+    },
+    {
+      "density": "1/512",
+      "density_reduced": "1/512",
+      "equals_2_over_4t": true,
+      "group_order": 512,
+      "prefix_depths": [],
+      "rank": 0,
+      "slice_size": 1,
+      "t": 5
+    },
+    {
+      "density": "128/65536",
+      "density_reduced": "1/512",
+      "equals_2_over_4t": true,
+      "group_order": 65536,
+      "prefix_depths": [
+        3
+      ],
+      "rank": 1,
+      "slice_size": 128,
+      "t": 5
+    },
+    {
+      "density": "32768/16777216",
+      "density_reduced": "1/512",
+      "equals_2_over_4t": true,
+      "group_order": 16777216,
+      "prefix_depths": [
+        3,
+        4
+      ],
+      "rank": 2,
+      "slice_size": 32768,
+      "t": 5
+    },
+    {
+      "density": "16777216/8589934592",
+      "density_reduced": "1/512",
+      "equals_2_over_4t": true,
+      "group_order": 8589934592,
+      "prefix_depths": [
+        3,
+        4,
+        5
+      ],
+      "rank": 3,
+      "slice_size": 16777216,
+      "t": 5
+    },
+    {
+      "density": "2147483648/1099511627776",
+      "density_reduced": "1/512",
+      "equals_2_over_4t": true,
+      "group_order": 1099511627776,
+      "prefix_depths": [
+        3,
+        4,
+        5,
+        3
+      ],
+      "rank": 4,
+      "slice_size": 2147483648,
+      "t": 5
+    },
+    {
+      "density": "1/2048",
+      "density_reduced": "1/2048",
+      "equals_2_over_4t": true,
+      "group_order": 2048,
+      "prefix_depths": [],
+      "rank": 0,
+      "slice_size": 1,
+      "t": 6
+    },
+    {
+      "density": "256/524288",
+      "density_reduced": "1/2048",
+      "equals_2_over_4t": true,
+      "group_order": 524288,
+      "prefix_depths": [
+        3
+      ],
+      "rank": 1,
+      "slice_size": 256,
+      "t": 6
+    },
+    {
+      "density": "131072/268435456",
+      "density_reduced": "1/2048",
+      "equals_2_over_4t": true,
+      "group_order": 268435456,
+      "prefix_depths": [
+        3,
+        4
+      ],
+      "rank": 2,
+      "slice_size": 131072,
+      "t": 6
+    },
+    {
+      "density": "134217728/274877906944",
+      "density_reduced": "1/2048",
+      "equals_2_over_4t": true,
+      "group_order": 274877906944,
+      "prefix_depths": [
+        3,
+        4,
+        5
+      ],
+      "rank": 3,
+      "slice_size": 134217728,
+      "t": 6
+    },
+    {
+      "density": "34359738368/70368744177664",
+      "density_reduced": "1/2048",
+      "equals_2_over_4t": true,
+      "group_order": 70368744177664,
+      "prefix_depths": [
+        3,
+        4,
+        5,
+        3
+      ],
+      "rank": 4,
+      "slice_size": 34359738368,
+      "t": 6
+    }
+  ]
+}

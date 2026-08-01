@@ -1,0 +1,66 @@
+{
+  "claims": [
+    "\u00a76.2 Monte-Carlo validation pool for the exact constant R(3,3,3,3) = 1373/5300: 2395/9267 = 0.2584, |\u0394| = 0.06 pp"
+  ],
+  "command": [
+    "python3",
+    "barker_k6_bundle/research/skeleton_model_e1.py",
+    "sample",
+    "300000000",
+    "2000000",
+    "{seed}",
+    "_e1_survivors_s{seed}.npy"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {},
+  "name": "skeleton_e1",
+  "outputs": {
+    "_e1_survivors_s1.npy": "326c62100c197b8bc6c609c73a91b420a1871cfb73f5621298c6038e270b2ecd",
+    "_e1_survivors_s11.npy": "1a2d033271a25cac18624ec23e8e89c14fc482df3809ffd929323dc7b908ed31",
+    "_e1_survivors_s12.npy": "853183e982a282e85e4684f57be96909f12e356dd32e5aeae3f4c185c507041f",
+    "_e1_survivors_s13.npy": "415ac5a8f6f15a3004ef311e11336b11160fcdb97b8b6a615c02116cb2a05aac",
+    "_e1_survivors_s14.npy": "56ad46c53f921ac6790054e4adb6bb3ec085c9219fe0542496eeb1a5d151e6de",
+    "_e1_survivors_s15.npy": "a70fc7bbc6de47757dddb49481a681200b77e5e9c5bb9f256b2b9170ce600c3a",
+    "_e1_survivors_s16.npy": "e01000b4f4e84c25c575121005b78e31e858582058a179d2972c73b1c8ee5382",
+    "_e1_survivors_s2.npy": "b618b41b29e790b60266187829a38c44a26401a6f2a1d430383a96ca2fff36f3",
+    "_e1_survivors_s3.npy": "e46bb070f336b9344d32b0d6000169653af1b3f67f913fba8f22e3f6c4f30b26",
+    "_e1_survivors_s4.npy": "c9d627c8c124afd840ab95b2b65b5c076dd1a39d09c2e602eb010352bcc0dcf3",
+    "_e1_survivors_s5.npy": "cd730c66792b24673e19544b1348d5147837204c256244c05c4b02e2930adbbe",
+    "_e1_survivors_s6.npy": "0ecc72e2a235a40b228bfaf3e1f79d261e369e88c56cd89601ad36796c0b6ee3",
+    "_e1_survivors_s7.npy": "d09eb12c0022efed16b66a8b6a7a72bf69cc666d1a11689fd46755a71d9db6bc",
+    "_e1_survivors_s8.npy": "ae259092e24d2fecca97ea679e4e68ed2749b4d7176dab87c58110b88aff9085"
+  },
+  "parameters": {
+    "batch": 2000000,
+    "total_trials": 4000000000,
+    "trials_per_seed": 300000000,
+    "trials_seed_1": 100000000
+  },
+  "schema_version": 1,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "sources": {
+    "skeleton_model_e1.py": "6b1c3fbb980204d51f7521f45514ab5ff78a6db1c6b88ed58dba90bce635515b"
+  },
+  "tree_dirty": false
+}

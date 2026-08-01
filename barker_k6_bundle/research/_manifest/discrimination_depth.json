@@ -1,0 +1,30 @@
+{
+  "claims": [
+    "\u00a75.4 marginal contribution histogram (14719 / 26 / 111 / 0 / 1)",
+    "\u00a75.7 the unique \u03bb = 5 cross-class pair"
+  ],
+  "command": [
+    "python3",
+    "barker_k6_bundle/research/discrimination_depth.py"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {
+    "_enumeration_cache.json": "911a2e860fdcca88b7d79ec64ca8ae57c7deccb7ec16cab411882ad26e591c9a"
+  },
+  "name": "discrimination_depth",
+  "outputs": {},
+  "parameters": {},
+  "schema_version": 1,
+  "seeds": [],
+  "sources": {
+    "_common.py": "9a4cac239e1520827e8e251c2eaa6fe0003b2864267dcfc1208cbb7ec5a81323",
+    "discrimination_depth.py": "cdd5147e1e653b3014eba76ab939f187182c3274763468eb0c3195ab4798b5ec"
+  },
+  "tree_dirty": false
+}

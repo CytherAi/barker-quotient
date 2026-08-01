@@ -1,0 +1,54 @@
+{
+  "claims": [
+    "\u00a76.2 Monte-Carlo validation pool for the exact constant R(3,3,3,4) = 1123/4215: 3146/11821 = 0.2661, |\u0394| = 0.03 pp \u2014 the preregistration-locked value earlier drafts mistakenly compared against the all-depth-3 census rate"
+  ],
+  "command": [
+    "python3",
+    "barker_k6_bundle/research/skeleton_model_e1_mixed.py",
+    "measure",
+    "_e1deep_s{seed}.npz"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {},
+  "name": "skeleton_e1_mixed",
+  "outputs": {
+    "_e1deep_s401.npz": "fdda6b14aa47f6ef2888e5c28bfbcb9c38f9f6960b7594023fd1b9036dcf11b6",
+    "_e1deep_s402.npz": "a68b5ddf8e828ac1937cb22e1c0d5be50eb77a140d7ebd7af716fbc818fd5f9c",
+    "_e1deep_s403.npz": "a9f3d1ad0fab14d49f185ebd5b1dd10a81f88f65f7a869223b3443506bb8a43d",
+    "_e1deep_s404.npz": "985974f0a32cf991cfe3c1201371e22cb1fcb0e03a8b74ebb919a97c9767703e",
+    "_e1deep_s405.npz": "49e44467956023d367c381287b74e2a0c0949e19b115d7be4ce78dca1419fa20",
+    "_e1deep_s406.npz": "d4cff9065738e91d41bc23fafbeb602275c083c5e65de9e46ac87dae65415624",
+    "_e1deep_s407.npz": "f443e9d577024761b9ea3ec77bca397f4d744268e271f8478bd3d44f4fb333ac",
+    "_e1deep_s408.npz": "3d062a0c63bf2da9919b450443cb82a428eb280a8bc8bdcf9381346f0fef144d",
+    "_e1deep_s409.npz": "d8d342ce5c67855094d83cad7f68be632cfb9b06a5f47cc02b4eac95059f48f6",
+    "_e1deep_s410.npz": "3334bc28d5f28a3d4bbba122eb1fffe25dc38893fceb40347e4c213b336eb3ec"
+  },
+  "parameters": {
+    "locked_benchmark": 0.2661,
+    "n_cell": 11821,
+    "profile": "(3,3,3,4)"
+  },
+  "schema_version": 1,
+  "seeds": [
+    401,
+    402,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409,
+    410
+  ],
+  "sources": {
+    "skeleton_model_e1_mixed.py": "e309cb258a6a05016817cb6d7f3d72dafc454f733d4857f9b0b6dc221c3681be"
+  },
+  "tree_dirty": false
+}

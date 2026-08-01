@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+message: "Please cite the relevant companion paper and this software release."
+title: "barker-quotient: A 2-Primary Quotient Framework for Barker Obstructions"
+abstract: >-
+  Source code, paper, and verification suite for the 2-primary quotient
+  framework for the Barker sequence non-existence problem. Exhaustively
+  enumerates the 421 minimal covering configurations of hard primes at
+  k <= 6 over the first 80 hard primes, in six primary structural strata
+  (plus the overlapping A_blocked refinement flag); proves the
+  cofactor-cycle theorem at the full-hub (A1) spine with its structural
+  cutoff, of which S = {17881, 1801, 14537, 13417, 18121, 18521} is the
+  unique A1 instance at size 6 (the census contains 61 configurations at
+  k = 6 in total); establishes a discrimination-depth ladder over the
+  strata; and evaluates the reciprocity-symmetric skeleton null exactly,
+  giving R(3,3,3,3) = 1373/5300 and R(3,3,3,4) = 1123/4215 and thereby
+  disproving the depth-flatness earlier Monte-Carlo estimates suggested. A
+  companion theorem proves that, after row-gauge reduction, reciprocity and
+  the conditions involving 2 are the only global realizability constraints,
+  and identifies the skeleton product measure as the exact per-prefix and
+  iterated arithmetic law. It does not prove a simultaneous-height frequency
+  theorem or a new Barker obstruction.
+  The v1.0 release (2026-05-16) carried an earlier framing built on the
+  Hub Self-Defeat Theorem and a 13-configuration Type A/B classification;
+  that reading is superseded by the census.
+type: software
+version: "1.2"
+date-released: "2026-07-30"
+authors:
+  - family-names: "Alhazmi"
+    given-names: "Malek"
+    affiliation: "CytherAi"
+    website: "https://cytherai.com"
+license: MIT
+license-url: "https://opensource.org/licenses/MIT"
+repository-code: "https://github.com/CytherAi/barker-quotient"
+url: "https://github.com/CytherAi/barker-quotient"
+keywords:
+  - "Barker sequences"
+  - "Barker non-existence conjecture"
+  - "hard primes"
+  - "2-primary quotient"
+  - "Turyn self-conjugacy"
+  - "Weisfeiler-Lehman refinement"
+  - "minimal covering sets"
+  - "cyclotomic integers"
+  - "number theory"
+  - "combinatorics"
+  - "Chebotarev density"
+  - "Kummer theory"
+preferred-citation:
+  type: article
+  title: "Minimal Covering Configurations of Hard Primes: A Cofactor-Cycle Theorem and the Arithmetic Floor of a 2-Primary Census"
+  authors:
+    - family-names: "Alhazmi"
+      given-names: "Malek"
+      affiliation: "CytherAi"
+  year: 2026
+  # arXiv identifier — update after the preprint is assigned an ID.
+  # identifiers:
+  #   - type: other
+  #     value: "arXiv:XXXX.XXXXX"
+  #     description: "arXiv preprint identifier"

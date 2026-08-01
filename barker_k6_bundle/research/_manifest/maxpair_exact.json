@@ -1,0 +1,69 @@
+{
+  "claims": [
+    "\u00a76.2 exact maximal-pairwise rate R(3,3,3,4) = 0.2663959, pooled over the four depth-3 hubs as the census rate is \u2014 injecting the measured universe (3,3) joints moves the modelled rate only -0.0033 pp from the independent-digit constant 1123/4215, i.e. 0.2% of the distance to the observed 0.2498, so the pair-level law is consequence-free for this observable",
+    "\u00a76.2 exact per-hub rates 0.266375, 0.266400, 0.266409, 0.266400 \u2014 a spread of 3.4e-5, against the Monte-Carlo pool's apparent 0.0123 at ~0.009 sampling error per hub",
+    "\u00a76.2 symmetrized-joint sensitivity R(3,3,3,4) = 0.2664038 (-0.0026 pp): removing the joint's orientation-antisymmetric component moves the observable no further than the measured joint does. Not a decomposition \u2014 symmetrizing also averages the endpoint marginals and the rate is nonlinear in the joint",
+    "\u00a76.2 machinery validation: the same tensor network with uniform digits reproduces exact_dp's constant 1123/4215, and uniform digits produce four identical hubs (the positive control on the pooling that a symmetric-input validation alone cannot supply)"
+  ],
+  "command": [
+    "python3",
+    "skeleton_exact/maxpair_exact.py"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {},
+  "name": "maxpair_exact",
+  "outputs": {
+    "../../skeleton_exact/_maxpair_exact.json": "01c7858c118cdbd1225f0558cdae0d335bf86c9f87ba72115b082a5585934e66"
+  },
+  "parameters": {
+    "R_decimal": 0.2663959,
+    "R_maxpair_exact": "28345526604025309972212577/106403745905832904560284283",
+    "R_per_hub": [
+      0.266375,
+      0.2664,
+      0.266409,
+      0.2664
+    ],
+    "R_symmetrized": "1058377805268200408975721387/3972832326551851183042320130",
+    "gap_fraction": 0.002,
+    "hub_num_cell": [
+      [
+        "793579310981401918655295144",
+        "2979178828758837096066728720"
+      ],
+      [
+        "793688214923654921912609040",
+        "2979307934294575503038954792"
+      ],
+      [
+        "793729892510340708017355488",
+        "2979370227836382531447744680"
+      ],
+      [
+        "793701561235437168302548952",
+        "2979362550563490180198411504"
+      ]
+    ],
+    "joints_measured_at_N": 320,
+    "live_parity_graphs_per_hub": 64,
+    "moduli_bits": 18,
+    "movement_pp": -0.0033,
+    "n_moduli": 7,
+    "symmetrized_movement_pp": -0.0026,
+    "uniform_hubs_identical": true,
+    "validation_uniform": "1123/4215"
+  },
+  "schema_version": 1,
+  "seeds": [],
+  "sources": {
+    "../../skeleton_exact/maxpair_exact.py": "df2673440ede6be1b1ff672305b125f2bd88c3a5ef7dc6bea6e6147ef87bb91a",
+    "../../skeleton_exact/test_maxpair_exact.py": "668680490f28439cd4b773bc1e01c31276086676754a886b5217ff8b353866e8"
+  },
+  "tree_dirty": false
+}

@@ -1,0 +1,55 @@
+{
+  "claims": [
+    "\u00a76.2 calibration: on the exact population the manuscript measures its even joint on \u2014 8,734 depth-3 even-sector zero-\u03b4 pairs at N = 320, equal to We.sum() \u2014 Burde's law (q/p)_4 (p/q)_4 = ((ad-bc)/q) holds on 8734/8734 pairs, with the right-hand side non-constant (+1 4,994, -1 3,740)",
+    "\u00a76.2 calibration: the even-sector quartic-bit agreement count is identically the count of (ad-bc)/q = +1, both 4,994 of 8,734, so the joint's agreement structure at the quartic layer IS Burde's right-hand side; marginals 0.3401 and 0.3295 sit near the skeleton's 1/3, so the departure is in the joint, not the marginals",
+    "BOUNDARY (registered as a limit, not a result): the law does NOT explain why (ad-bc)/q = +1 in 4,994 of 8,734 pairs, does NOT explain the ordered-joint asymmetry since it is symmetric in p and q, and does NOT constrain the odd hub-cofactor edges carrying \u03c3_x \u2014 the all-QNR gate makes all 4 of them odd, where the quartic symbol is undefined; it reaches only cofactor-internal even edges, present in 63 of 64 parity patterns",
+    "the four displayed forms (ad\u00b1bc, ac\u00b1bd)/q are equivalent on hard primes, which are all 1 mod 8: agreement across them is one identity tested four times, not four independent confirmations"
+  ],
+  "command": [
+    "python3",
+    "barker_k6_bundle/research/burde_pair_law.py"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {},
+  "name": "burde_pair_law",
+  "outputs": {
+    "_burde_pair_law.json": "89fac78a1e39864962a03187c45fa98de9865981fa1f07b9a4bafac32947aae8"
+  },
+  "parameters": {
+    "agreement_count": 4994,
+    "cofactor_patterns_with_even_edge": 63,
+    "depth3_primes": 250,
+    "equals_We_sum": true,
+    "even_sector_pairs": 15564,
+    "four_forms_equivalent": 8734,
+    "hub_cofactor_edges_applicable": 0,
+    "identity_holds": 8734,
+    "identity_of": 8734,
+    "marginals": {
+      "(p/q)_4=+1": 0.3295,
+      "(q/p)_4=+1": 0.3401
+    },
+    "negative_control_perturbed": 0.5,
+    "negative_control_scrambled": 0.5065,
+    "pairs_after_zero_delta": 8734,
+    "rhs_split": {
+      "+1": 4994,
+      "-1": 3740
+    },
+    "sign_choice_invariant": 8734,
+    "universe": 320
+  },
+  "schema_version": 1,
+  "seeds": [],
+  "sources": {
+    "../../tests/test_burde_pair_law.py": "926f20e064850e2196acd31012fb15363157daccbee7ece2588466942f253a56",
+    "burde_pair_law.py": "b564a3ef5249066b5ebe837bde628be4a5999cb99c170a14fdfd8017460e03f7"
+  },
+  "tree_dirty": false
+}

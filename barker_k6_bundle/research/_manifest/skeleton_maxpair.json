@@ -1,0 +1,66 @@
+{
+  "claims": [
+    "\u00a76.2 maximal-pairwise point estimate R(3,3,3,4) = 3003/11550 = 0.2600 from 5,732 contributing survivor matrices, cluster bootstrap interval [0.2516, 0.2685]. The pool no longer sources a claim: the exact engine supersedes it, and the pool is its sampling validation \u2014 the interval covers the exact pooled value 0.2663959 with the point estimate 1.47 SE below it",
+    "\u00a76.2 per-hub Monte-Carlo counts 785/2921, 745/2885, 727/2835, 746/2909 \u2014 an apparent spread of 0.0123 at ~0.009 sampling error per hub, against a true spread of 3.4e-5, so the pool cannot resolve the hubs it pools"
+  ],
+  "command": [
+    "python3",
+    "barker_k6_bundle/research/skeleton_model_maxpair.py",
+    "check"
+  ],
+  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "environment": {
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "inputs": {},
+  "name": "skeleton_maxpair",
+  "outputs": {
+    "_maxpair_s501.npz": "9a16c5bd6f826de915326499a242d7570f615b5eeba88ba61c6418ac30fab359",
+    "_maxpair_s502.npz": "1fded526792241a401d9069f648dc33a02b0cd929309ec9152b230ebefe1dca0",
+    "_maxpair_s503.npz": "36fe619fbacc0805e2f39e9f182fb5f4da14eb699960f13e373cfeee10bad6d8",
+    "_maxpair_s504.npz": "ae6e16de2842b45db62a26afe74df5e64acb3759fbedc51114aeeabe90ed43b2",
+    "_maxpair_s505.npz": "c6cbc407512b51e5e60c52f7b2dea1239affeca4071536e36f32c2dfbaa91f79",
+    "_maxpair_s506.npz": "7bf095d41a2b2eb277d35cf4c5d3c6c49817bf59644e2513e29fad18df86c596",
+    "_maxpair_s507.npz": "8a7cec4fd2ca90bd23241880618ca312f0afd36895fdcea40272412be202fb6a",
+    "_maxpair_s508.npz": "f732caf3cfe4caa5e2367cb873cec5e2ca99ff857cc4f8c4043dc336f1112a45",
+    "_maxpair_s509.npz": "df15f773c7f61f7d51fae3ff22115cfc66fca0edc814c51fb1fbb69a467656f2",
+    "_maxpair_s510.npz": "0fa9e1f3b18896b70aa89c9f4220d81e3e3330765a794895a9036834d2afca34",
+    "_maxpair_summary.json": "b9d042539c72d9cf493170fb4f0c5ed2e2c4b254730d6b1a7448f88cf406d955"
+  },
+  "parameters": {
+    "N_universe": 320,
+    "R_point": 0.26,
+    "batch": 2000000,
+    "cluster_ci95": [
+      0.2516,
+      0.2685
+    ],
+    "cluster_se": 0.00434,
+    "contributors": 5732,
+    "profile": "(3,3,3,4)",
+    "successes": 3003,
+    "survivors": 9205,
+    "targets": 11550,
+    "trials_per_seed": 1500000000
+  },
+  "schema_version": 1,
+  "seeds": [
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510
+  ],
+  "sources": {
+    "skeleton_model_maxpair.py": "6c8a701ba6400841369446a897e45dc5fc436ccbffeade3a8232eb74cee5184e"
+  },
+  "tree_dirty": false
+}
