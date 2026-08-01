@@ -12,11 +12,11 @@
     "{N}",
     "--check"
   ],
-  "commit": "e5703b7da2e40099c945bf2aa4b1bef7546c5fe2",
+  "commit": "e4f94b09504bc18113899b487844f17018162ae5",
   "environment": {
     "machine": "arm64",
-    "numpy": "2.4.6",
-    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "numpy": "2.5.1",
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
     "python": "3.13.0"
   },
   "inputs": {
