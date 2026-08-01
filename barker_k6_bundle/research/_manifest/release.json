@@ -1,5 +1,5 @@
 {
-  "commit": "a77aa6ea57ec4bb24151696536179be8469bbcdf",
+  "commit": "004e68bc12e816c072877efab74f4cae4369b741",
   "environment": {
     "machine": "arm64",
     "numpy": "2.5.1",
@@ -7,18 +7,18 @@
     "python": "3.13.0"
   },
   "experiments": {
-    "burde_pair_law": "3b57c6e91db5e1113e3b3c0ee4d7185a4b59062fca83185d01e21a4ce8c99b94",
-    "discrimination_depth": "0be1672ca30e3c22018a9aeb88c243b1d5d78a1fadd4ac508b0439ccdb42c880",
-    "i6_vs_1wl": "3d45507a5ec5cface9bdb111201ad29a3b0cc86f2c738f475fc9c67f58e3be27",
-    "k5_correlation": "9fd868816b9c1938554ba482c78baf7e579db486fca4f0ab65ea4797a356cd4e",
-    "maxpair_exact": "38d7995ce269b2e706a1d326e0b5148e960f622354661a6a7077e6f3fa1065d2",
-    "per_depth_w2": "57b00a85c1b3439d1193461809d5b626723e0c6f2442c054a040778c36d43e93",
-    "realization_theorem": "5311e74404c5a96e828aaa8fe398b8e9321588fd18cd9a22dee1ff5ea4296749",
-    "redei_bridge": "8208c616ac0408ac77f34bf23e6cd89a7176565b036104a347ccd77adae072b6",
-    "skeleton_e1": "1c869e4cb92d8ae9517ef4aaeef3d95081541bb7c1c6fcd9b2cf4808feb6a62b",
-    "skeleton_e1_mixed": "d2ae0e2f7912979410861efa753100ed6fc58aa450cfd3cae3dd5e37143e7b13",
-    "skeleton_exact": "fce35cdd30ce3662b1edef925d472bee01510644ed14d9f25dcfabec25ca494f",
-    "skeleton_maxpair": "bdae55c38e5a51e96ff2bb14251fc73d55f010b4918d88b0813ba02062195708"
+    "burde_pair_law": "9b59942542a1712e85899da194a13a2ae3de16f09b9c78333a7a8071c285b906",
+    "discrimination_depth": "dca17e256dde95d999d786860cd41f8313f58153441866de4613795a5e0e4ce3",
+    "i6_vs_1wl": "bffbb582eea6f4bd96350e3de05f52d93ab4771ade47ade4f95253a0cdd3ad6e",
+    "k5_correlation": "49d430c38f9088b7e389393178b4978738c639c5c6258870016b477ac5be305e",
+    "maxpair_exact": "55f85e581fc3f84358c74d5e6e3bb71aa795f3e47d8c0231636c4c204f191a8f",
+    "per_depth_w2": "c9d600c1697d7feb53d77cbdb9c8de336b8cf5d1208dcf444fe3f2cfd949c1da",
+    "realization_theorem": "e5cd55b80b6d9fc0a0ecf7bf3f3b18de2a838bf863b8fc4c4c27b4a763c66be8",
+    "redei_bridge": "ab9c31a90b0220be6993820fc9b369e7a861ae81eb049445142dfd4f39e786e2",
+    "skeleton_e1": "e0c6ec801ec5328f28327d116ac118cd8c7b798aadf1b4e44299d9c33ec5cd46",
+    "skeleton_e1_mixed": "707fd23c7bc7d6ba146d6eb382b68dfafef8ff6549b39f42720412a3c0ba783b",
+    "skeleton_exact": "489ec50d78ae0b4064bebc69bb450497b006ae40d15d8ae5cfc8feac872788f4",
+    "skeleton_maxpair": "bc480cce3162189380af5ef065c56273d019a3ea62d2f36e7271b1219499db5c"
   },
   "inventory": {
     "files": {
