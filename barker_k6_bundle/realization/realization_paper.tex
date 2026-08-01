@@ -140,6 +140,15 @@ simultaneous-height theorem.  All prime bounds may be taken successively,
 because the conditional law is prefix-independent; nothing here gives a
 uniform Chebotarev error term as the prefix field grows.
 
+Corollaries~\ref{cor:product} and~\ref{cor:rado} repackage the theorem as
+a single object: an exact arithmetic random structure on $\mathcal H$.
+The quadratic-residue parity alone already realizes the countable Rado
+graph on this thin family; the full structure equips that skeleton with
+independent geometric depth marks, uniform higher $2$-power coordinates,
+and a row gauge --- a gauge-valued $2$-adic lift of the prime
+quadratic-residue Rado graph, together with its exact extension law.
+The Barker application below is one motif family inside this object.
+
 The classical single-row precedent is Schinzel's extension of Kummer's
 theorem on prescribed power residues~\cite{Schinzel75,Schinzel77,Schinzel80}.
 His Theorem~4 is stated for general exponent $n$, not only odd-prime
@@ -509,8 +518,10 @@ the realization.
 
 \section{The exact iterated matrix law}
 
-The extension theorem canonically determines a finite probability space.
-For $i<j$, put
+The extension theorem canonically determines a projectively consistent,
+exchangeable family of finite probability spaces
+(Corollary~\ref{cor:product} below).  For a fixed depth vector the
+construction is as follows.  For $i<j$, put
 \[
  E_{ij}=\{(a,b)\in\Z/2^{t_i}\Z\times\Z/2^{t_j}\Z:
                     a\equiv b\pmod2\},
@@ -549,6 +560,82 @@ This theorem concerns nested limits.  It does not assert convergence when
 all primes are bounded by one common height: the field $FM$ and its
 discriminant grow with the prefix, and the ordinary Chebotarev theorem used
 above supplies no uniform error term for that regime.
+
+Two corollaries repackage the depth densities and the iterated law as one
+unconditional object.
+
+\begin{corollary}[Unconditional marked product law]\label{cor:product}
+Within $\mathcal H$ the exact-depth densities of
+Theorem~\ref{thm:extension} normalize by \eqref{eq:densitysum} to
+\[
+  \Pr(T=t)=\frac{2/4^{t}}{1/24}=\frac{3}{4^{t-2}},\qquad t\ge3,
+\]
+a geometric law summing to $1$.  Draw $k$ primes from $\mathcal H$ by
+successive bounds as in Theorem~\ref{thm:iterated}, without prescribing
+depths.  Then the depth marks $T_1,\ldots,T_k$ are independent with the
+law above; conditional on $\mathbf T=\mathbf t$ the raw matrix is
+distributed as $\nu^{\mathrm{raw}}_{\mathbf t}$; explicitly,
+\[
+ \Pr(\mathbf T=\mathbf t,\ A=a)
+ =\prod_{i=1}^{k}\frac{3}{4^{t_i-2}}
+  \prod_{1\le i<j\le k}
+  \frac{\mathbf 1_{\{a_{ij}\equiv a_{ji}\ (\mathrm{mod}\ 2)\}}}
+       {2^{t_i+t_j-1}},
+\]
+and the gauge-reduced structure follows the row-gauge pushforward.  The
+family over $k$ is exchangeable and projectively consistent: permuting
+vertices permutes the factors, and deleting a vertex deletes its depth
+factor and its incident pair factors.  It therefore extends to an
+exchangeable law on countable gauge-reduced structures.  As in
+Theorem~\ref{thm:iterated}, every statement is a nested-limit statement;
+nothing here concerns simultaneous height.
+\end{corollary}
+
+\begin{proof}
+Depth independence is the prefix-independence of the slice density in
+Theorem~\ref{thm:extension}, normalized by \eqref{eq:densitysum}; the
+conditional coordinate law is Theorem~\ref{thm:iterated}, and the display
+multiplies the factors $|E_{ij}|^{-1}=2^{-(t_i+t_j-1)}$.  Consistency
+holds in raw coordinates by the product form, and passes to gauge classes
+because the odd-unit action on a row is coordinatewise, so restriction to
+a subset of vertices commutes with the quotient.  The Kolmogorov
+extension theorem then applies.
+\end{proof}
+
+\begin{corollary}[Rado skeleton]\label{cor:rado}
+Join $p,q\in\mathcal H$ when $\chi_p(q)$ is even --- equivalently, by
+quadratic reciprocity, when $p$ and $q$ are quadratic residues of one
+another.  The resulting countable graph is isomorphic to the Rado graph.
+\end{corollary}
+
+\begin{proof}
+Let $U,V\subset\mathcal H$ be finite and disjoint.  Over the realized
+prefix $U\cup V$, at any depth $t\ge3$, Theorem~\ref{thm:extension} makes
+the new parity bits independent and fair, so the pattern ``even toward
+every vertex of $U$, odd toward every vertex of $V$'' is a cylinder of
+positive density: infinitely many $q\in\mathcal H$ are adjacent to all of
+$U$ and to none of $V$.  A countably infinite graph with this extension
+property is isomorphic to the Rado graph by
+back-and-forth~\cite{Cameron}.
+\end{proof}
+
+The analogous construction on all primes $p\equiv1\pmod4$ is a classical
+realization of the Rado graph~\cite{Cameron}; the content here is that
+the extension property survives restriction to the density-$1/24$
+odd-order family, and that this graph is only the parity skeleton of the
+full gauge-valued structure.
+
+\begin{remark}[Toward a universal homogeneous gauge structure]
+\label{rem:fraisse}
+Corollary~\ref{cor:realization} proves the one-point extension property
+in the full gauge-valued signature: every admissible extension of every
+realized finite substructure is realized by infinitely many primes.
+Formalizing the class of finite gauge-reduced matrices with its notion of
+embedding, and identifying the arithmetic structure on $\mathcal H$ as
+the universal homogeneous object of that class --- isomorphic to almost
+every sample of the law of Corollary~\ref{cor:product} --- is left to
+subsequent work and is not part of the frozen claim set.
+\end{remark}
 
 \section{Application to the Barker reciprocity skeleton}
 
@@ -670,6 +757,13 @@ P.~Borwein and M.~J. Mossinghoff,
 \emph{Wieferich pairs and Barker sequences, II},
 LMS J. Comput. Math. \textbf{17} (2014), no.~1, 24--32,
 \href{https://doi.org/10.1112/S1461157013000223}{doi:10.1112/S1461157013000223}.
+
+\bibitem{Cameron}
+P.~J. Cameron,
+\emph{The random graph},
+in: The Mathematics of Paul Erd\H{o}s II
+(R.~L. Graham and J.~Ne\v{s}et\v{r}il, eds.),
+Algorithms Combin. \textbf{14}, Springer, Berlin, 1997, pp.~333--351.
 
 \bibitem{Census}
 M.~Alhazmi,

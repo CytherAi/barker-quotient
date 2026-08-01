@@ -15,9 +15,15 @@ Quick locator across all three:
 This candidate adds the companion paper *Realization of Gauge-Reduced
 2-Power Residue Matrices: Exact Chebotarev Laws and an Application to Barker
 Sequences*. It proves the exact per-prefix extension law, global realization,
-the density `2/4^t`, and the exact iterated matrix law. The census manuscript
-now cites that theorem and narrows Question 6.2.G to simultaneous-height
-convergence; finite absences remain unobserved admissible motifs.
+the density `2/4^t`, and the exact iterated matrix law. Two corollaries
+repackage these as one object: the unconditional marked product law
+(independent geometric depth marks `P(T = t) = 3/4^(t-2)`, uniform
+reciprocity-compatible pair coordinates, row-gauge pushforward; exchangeable
+and projectively consistent, nested limits only) and the Rado skeleton (the
+mutual-quadratic-residue graph on the family is the countable Rado graph).
+The census manuscript now cites that theorem and narrows Question 6.2.G to
+simultaneous-height convergence; finite absences remain unobserved
+admissible motifs.
 
 The proof is accompanied by a registered falsification harness, not replaced
 by it. The harness pins the affine commutator and derived subgroup at depths
@@ -33,7 +39,7 @@ End-to-end release state:
 - **pytest suite:** **198 / 198 PASS** (187 core + 11 exact-skeleton)
 - **Provenance:** 95-file release inventory, 150 / 150 manifest-referenced
   paths git-tracked, every registered artifact matching its manifest
-- **Rendered papers:** 57-page census companion and 10-page realization paper,
+- **Rendered papers:** 57-page census companion and 12-page realization paper,
   both rebuilt from current sources and visually inspected
 
 ---

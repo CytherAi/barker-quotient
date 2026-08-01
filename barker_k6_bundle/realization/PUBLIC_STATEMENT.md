@@ -29,6 +29,18 @@ supplies not merely the support but an exact prefix-independent transition law.
   $7/24$ by an independent route through the degree calculation.
 - **Exact iterated law.** Successive prime bounds give an exact matrix product
   law independent of adjoining order.
+- **Unconditional marked product law.** Relative to the family, depth marks
+  are independent with $\Pr(T=t)=3/4^{t-2}$; conditional on depths, raw pair
+  coordinates are independent and uniform on the reciprocity-compatible
+  fibers; the gauge-reduced law is the row-gauge pushforward.  The family is
+  exchangeable and projectively consistent, hence extends to a countable
+  exchangeable random structure.  Every statement is a nested-limit
+  statement.
+- **Rado skeleton.** The graph on the family joining $p$ and $q$ when each is
+  a quadratic residue of the other is isomorphic to the countable Rado graph;
+  the classical construction on all $p\equiv1\pmod4$ survives restriction to
+  the density-$1/24$ odd-order subfamily, and is the parity skeleton of the
+  full gauge-valued structure.
 - **Scoped consequence.** No skeleton-admissible pattern is globally absent,
   so a proposed Barker argument cannot discard such a pattern by asserting
   that its gauge-reduced matrix is arithmetically unrealizable.
@@ -41,7 +53,10 @@ constant.  Nothing about nonabelian, class-group, or higher-cohomological data
 that does not factor through the gauge-reduced matrix.  Finite census absences
 remain unobserved skeleton-admissible motifs, never forbidden.  The realization
 corollary blocks one inference step; it is not a no-go theorem for a method
-class.
+class.  The identification of the full gauge-valued structure as a universal
+homogeneous (Fra\"iss\'e-generic) object is a labeled remark, not a claim:
+the one-point extension property is proved, the category of gauge-valued
+structures and embeddings is not yet formalized.
 
 ### Positioning
 

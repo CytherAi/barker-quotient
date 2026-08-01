@@ -39,6 +39,14 @@ scope.
   of distinct primes.
 - Successive prime bounds give the exact iterated product law, independent of
   adjoining order.
+- Unconditional marked product law (corollary): depth marks are independent
+  with `P(T = t) = 3/4^(t-2)`; conditional on depths, raw pair coordinates
+  are independent and uniform on reciprocity-compatible fibers; the
+  gauge-reduced law is the row-gauge pushforward.  The family is exchangeable
+  and projectively consistent and extends to a countable random structure.
+  Nested limits only.
+- Rado skeleton (corollary): the mutual-quadratic-residue graph on this
+  family is isomorphic to the countable Rado graph.
 - Consequently the skeleton used by the census is the exact iterated
   arithmetic law, not merely a fitted or Monte-Carlo null model.
 
@@ -82,6 +90,10 @@ theorem.
   thread `../research/eligibility_bias_program.md`.
 - No inference from Monte-Carlo intervals to exhaustive censuses, and no
   significance language for fitted in-sample baselines.
+- No universal-homogeneity (Fraïssé) theorem.  The one-point extension
+  property in the full gauge-valued signature is proved; formalizing the
+  category of gauge-valued structures and identifying the arithmetic
+  structure as its generic object is a labeled remark left to later work.
 
 ## Full-audit coverage ledger
 
