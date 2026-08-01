@@ -1,5 +1,5 @@
 {
-  "commit": "e4f94b09504bc18113899b487844f17018162ae5",
+  "commit": "a77aa6ea57ec4bb24151696536179be8469bbcdf",
   "environment": {
     "machine": "arm64",
     "numpy": "2.5.1",
@@ -7,24 +7,24 @@
     "python": "3.13.0"
   },
   "experiments": {
-    "burde_pair_law": "95173a617928d3d42f3ee6bef4c3c019a321b0d1388b4849d7202b34dc327f09",
-    "discrimination_depth": "d3661c76dadc5ece84b944e7715c9af8b33ee47969dd16e84854c53d2d3f338b",
-    "i6_vs_1wl": "1aea96c6ce691f7b5016ff806bd78d27a0afce77224254987ed28487cafe3ed7",
-    "k5_correlation": "83bb784477b76f2261757995b3dc0a376466fe695a42dea0e2e2fa6c1462d786",
-    "maxpair_exact": "9773e124062d902d0d112fe96c89219bd5db6bbe88d95bb7586ebea0d3467ffc",
-    "per_depth_w2": "e2ea6868f0a1061a0270baac31eac589a80df943fe0b1a1009784a92d824603d",
-    "realization_theorem": "010004ccf094ffa822f3d54b71f8e7eb1b442bbd9b0738500f26e5a9dc1bc2ef",
-    "redei_bridge": "6be040e495551f9f94ffb087b3e6ee012bdc9c6d051979052197bcc226692b60",
-    "skeleton_e1": "93ef0d15e01139cac609cc3349030d4e584e52e785cc7f823c14bfe384c6b18f",
-    "skeleton_e1_mixed": "82d95a0a051d3529c1580cd6aa4c081c4b72f966d117408795f5103ad3ee7ed3",
-    "skeleton_exact": "71e6cc26b3b462ab1898da70af07f9a41233b3c9afc1eef5eee6416a615f2414",
-    "skeleton_maxpair": "3d3343fe1198ef0390782dbaf165a9bdc7897dface8f4b10f7fe1b2f514076aa"
+    "burde_pair_law": "3b57c6e91db5e1113e3b3c0ee4d7185a4b59062fca83185d01e21a4ce8c99b94",
+    "discrimination_depth": "0be1672ca30e3c22018a9aeb88c243b1d5d78a1fadd4ac508b0439ccdb42c880",
+    "i6_vs_1wl": "3d45507a5ec5cface9bdb111201ad29a3b0cc86f2c738f475fc9c67f58e3be27",
+    "k5_correlation": "9fd868816b9c1938554ba482c78baf7e579db486fca4f0ab65ea4797a356cd4e",
+    "maxpair_exact": "38d7995ce269b2e706a1d326e0b5148e960f622354661a6a7077e6f3fa1065d2",
+    "per_depth_w2": "57b00a85c1b3439d1193461809d5b626723e0c6f2442c054a040778c36d43e93",
+    "realization_theorem": "5311e74404c5a96e828aaa8fe398b8e9321588fd18cd9a22dee1ff5ea4296749",
+    "redei_bridge": "8208c616ac0408ac77f34bf23e6cd89a7176565b036104a347ccd77adae072b6",
+    "skeleton_e1": "1c869e4cb92d8ae9517ef4aaeef3d95081541bb7c1c6fcd9b2cf4808feb6a62b",
+    "skeleton_e1_mixed": "d2ae0e2f7912979410861efa753100ed6fc58aa450cfd3cae3dd5e37143e7b13",
+    "skeleton_exact": "fce35cdd30ce3662b1edef925d472bee01510644ed14d9f25dcfabec25ca494f",
+    "skeleton_maxpair": "bdae55c38e5a51e96ff2bb14251fc73d55f010b4918d88b0813ba02062195708"
   },
   "inventory": {
     "files": {
       "CITATION.cff": "f96bce4291f72478f02a6efd051bfd5ef5c69db8871304edb9789b35897adac1",
       "README.md": "7d7fd1c3720dad3f48fb03e5568fe6eee83083b24f095ca7f799a65c5a4199e1",
-      "RELEASE_NOTES.md": "9813a4ec36a2f076c28ddead6ea9d4e21ae6a9407e2cec6e148f57e6949dae9e",
+      "RELEASE_NOTES.md": "8cb49cac08733e88c02059abb588eabfc8393fd98c688985fd35da9a8bec2599",
       "barker_k6_bundle/README.md": "e9907b43e71a3073f9b50470489f6dfd13345423c0cd5e762c2a6611458db749",
       "barker_k6_bundle/audit_cleanroom.py": "99f3b284bb6857a3b3fb3a829ebbf678fcd0487107616845f69426fdec8b4847",
       "barker_k6_bundle/audit_verify.py": "4d1ba34ab1e59d718bb78bbfb1a26be77c5fcaf17a7b321ee39d98aac5b5cf1b",
@@ -47,7 +47,7 @@
       "barker_k6_bundle/manuscript.pdf": "bebe451b6643e72393d355b9069eec2555521b99f3cab5ae615e5d97b40fd83d",
       "barker_k6_bundle/pdf_math_filter.lua": "0e5ae5d2498f1a88b45e030aad7f8c8f4c33e81e11881b6d2d3d1ec724ed365a",
       "barker_k6_bundle/realization/PUBLICATION_FREEZE.md": "a012b725e30b347a5148bfe5ac2cd1fe57dec5a9a12ed44c5df55d4cbbd07f16",
-      "barker_k6_bundle/realization/PUBLIC_STATEMENT.md": "095f88a6489007be1a28528cced9b33cf9ff5489418ab64ec3032f01bad5b2a3",
+      "barker_k6_bundle/realization/PUBLIC_STATEMENT.md": "99860b96cf0c9e8b627ab293b2973ed8236f90c71f2f07e41c8d0585cc2aefd6",
       "barker_k6_bundle/realization/README.md": "8622afaa3dbdf98211e74d4b7cfcfdb660acd0999224e208fd8b95e16aeb34cd",
       "barker_k6_bundle/realization/realization_paper.pdf": "e49677200e47e8dec9824ca152d30ad274db0b86e9e73b050be3a269c19baace",
       "barker_k6_bundle/realization/realization_paper.tex": "751f1d13edfc06522d0655d3a77e3eb37cc6f43cb5a3c23d33b93d88ca4f1c53",
@@ -119,7 +119,7 @@
       "verify_all.sh": "5af3d28b792ac8ade6b5855cc45e40c6966dc588339ed29aaefe531ff189f259"
     },
     "n_files": 95,
-    "tree_sha256": "d19093603748f08b57fd24f9e1fc063f29a35841ebc3145e12373663d0c3ce3c"
+    "tree_sha256": "df71cffa60f03521a8419e9857addede83f4c32ca147ec4ab200ba6925bc7d61"
   },
   "requirements": {
     "numpy_min": [

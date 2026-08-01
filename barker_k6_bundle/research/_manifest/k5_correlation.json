@@ -12,7 +12,7 @@
     "{N}",
     "--check"
   ],
-  "commit": "e4f94b09504bc18113899b487844f17018162ae5",
+  "commit": "a77aa6ea57ec4bb24151696536179be8469bbcdf",
   "environment": {
     "machine": "arm64",
     "numpy": "2.5.1",
